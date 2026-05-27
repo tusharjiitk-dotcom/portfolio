@@ -1,0 +1,201 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Tushar Joshi - Engineer, MBA, Product Thinker. IIT Kanpur M.Tech (10/10) · IIM Udaipur Gold Medal · Ex-Mahindra R&D.">
+  <title>Tushar Joshi - Portfolio</title>
+
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="index">
+
+  <!-- NAV (injected by main.js) -->
+  <div id="nav-placeholder"></div>
+
+  <!-- ═══════ HERO ═══════ -->
+  <section class="hero section-alt">
+    <div class="container">
+      <div id="hero-content"></div>
+    </div>
+  </section>
+
+  <!-- ═══════ HIGHLIGHTS (replaces stats + bento) ═══════ -->
+  <section id="about" class="section highlights-section">
+    <div class="container">
+      <div id="about-content"></div>
+    </div>
+  </section>
+
+  <!-- ═══════ EXPERIENCE ═══════ -->
+  <section id="experience" class="section section-alt">
+    <div class="container">
+      <div class="sec-head fade-in">
+        <div class="sec-label">Work Experience</div>
+        <div class="sec-title">Professional Journey</div>
+      </div>
+      <div id="experience-content"></div>
+    </div>
+  </section>
+
+  <!-- ═══════ EDUCATION ═══════ -->
+  <section id="education" class="section">
+    <div class="container">
+      <div class="sec-head fade-in">
+        <div class="sec-label">Education</div>
+        <div class="sec-title">Academic Background</div>
+      </div>
+      <div id="education-content"></div>
+    </div>
+  </section>
+
+  <!-- ═══════ PROJECTS ═══════ -->
+  <section id="projects" class="section section-alt">
+    <div class="container">
+      <div class="sec-head fade-in">
+        <div class="sec-label">Portfolio</div>
+        <div class="sec-title">Projects &amp; Case Studies</div>
+      </div>
+      <!-- Filter Bar -->
+      <div class="filter-bar fade-in">
+        <div class="ftab active"  onclick="filterProjects('all',       this)">All</div>
+        <div class="ftab"         onclick="filterProjects('work',      this)">Professional</div>
+        <div class="ftab"         onclick="filterProjects('mba',       this)">MBA</div>
+        <div class="ftab"         onclick="filterProjects('engineering',this)">Engineering</div>
+        <div class="ftab"         onclick="filterProjects('self',      this)">Self Work</div>
+        <div class="ftab"         onclick="filterProjects('competition',this)">Competition</div>
+      </div>
+      <div id="projects-content"></div>
+    </div>
+  </section>
+
+  <!-- ═══════ SKILLS ═══════ -->
+  <section id="skills" class="section">
+    <div class="container">
+      <div class="sec-head fade-in">
+        <div class="sec-label">Expertise</div>
+        <div class="sec-title">Skills &amp; Tools</div>
+      </div>
+      <div id="skills-content"></div>
+    </div>
+  </section>
+
+  <!-- ═══════ RESEARCH ═══════ -->
+  <section id="research" class="section section-alt">
+    <div class="container">
+      <div class="sec-head fade-in">
+        <div class="sec-label">Research &amp; IP</div>
+        <div class="sec-title">Publications &amp; Patent</div>
+      </div>
+      <div id="research-content"></div>
+    </div>
+  </section>
+
+  <!-- ═══════ MORE ABOUT ME ═══════ -->
+  <section id="more" class="section">
+    <div class="container">
+      <div class="sec-head fade-in">
+        <div class="sec-label">The Full Picture</div>
+        <div class="sec-title">More About Me</div>
+      </div>
+      <div id="more-content"></div>
+    </div>
+  </section>
+
+  <!-- ═══════ AWARDS & CERTIFICATIONS ═══════ -->
+  <section id="awards" class="section section-alt">
+    <div class="container">
+      <div class="sec-head fade-in">
+        <div class="sec-label">Recognition</div>
+        <div class="sec-title">Awards &amp; Certifications</div>
+      </div>
+      <div id="awards-content"></div>
+    </div>
+  </section>
+
+  <!-- ═══════ BLOG PREVIEW ═══════ -->
+  <section id="blog" class="section">
+    <div class="container">
+      <div id="blog-preview-content"></div>
+    </div>
+  </section>
+
+  <!-- ═══════ CONTACT ═══════ -->
+  <section id="contact" class="section section-dark">
+    <div class="container">
+      <div class="sec-head fade-in">
+        <div class="sec-label">Get In Touch</div>
+        <div class="sec-title">Contact</div>
+      </div>
+      <div class="contact-grid fade-in">
+        <div>
+          <p class="contact-desc">Open to full-time roles in product management, strategy, and engineering leadership. Currently based in India and exploring global opportunities.</p>
+          <a class="contact-link" href="mailto:tusharj.iitk@gmail.com">
+            <div class="contact-link-icon">✉</div>tusharj.iitk@gmail.com
+          </a>
+          <a class="contact-link" href="https://www.linkedin.com/in/tushar-profile/" target="_blank">
+            <div class="contact-link-icon">in</div>linkedin.com/in/tushar-profile
+          </a>
+          <a class="contact-link" href="assets/resume.pdf" target="_blank">
+            <div class="contact-link-icon">↓</div>Download Resume (PDF)
+          </a>
+        </div>
+        <form onsubmit="return false;">
+          <div class="form-group">
+            <label class="form-label">Name</label>
+            <input class="form-input" type="text" placeholder="Your name">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Email</label>
+            <input class="form-input" type="email" placeholder="your@email.com">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Message</label>
+            <textarea class="form-input form-textarea" placeholder="Your message..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Send Message →</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER (injected by main.js) -->
+  <div id="footer-placeholder"></div>
+
+  <!-- ═══════ DETAIL PANEL (shared overlay) ═══════ -->
+  <div class="panel-overlay" id="panel-overlay"></div>
+  <div class="detail-panel" id="detail-panel">
+    <div class="dp-header">
+      <div class="dp-header-info">
+        <div class="dp-type" id="dp-type"></div>
+        <div class="dp-title-sm" id="dp-title-sm"></div>
+      </div>
+      <button class="dp-close" onclick="closePanel()">✕</button>
+    </div>
+    <div class="dp-body">
+      <div class="dp-badge" id="dp-badge-wrap"></div>
+      <div class="dp-main-title" id="dp-main-title"></div>
+      <div class="dp-desc" id="dp-desc"></div>
+      <div class="dp-outcome" id="dp-outcome"></div>
+      <div class="dp-section-title" id="dp-hl-title">Key Details</div>
+      <div class="dp-highlights" id="dp-highlights"></div>
+      <div class="dp-section-title" id="dp-ach-title">Highlights</div>
+      <div class="dp-achievements" id="dp-achievements"></div>
+      <div class="dp-section-title">Tags &amp; Tools</div>
+      <div class="dp-chips" id="dp-chips"></div>
+    </div>
+    <div class="dp-footer">
+      <button class="btn btn-primary" style="flex:1;" onclick="closePanel()">Got it →</button>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
