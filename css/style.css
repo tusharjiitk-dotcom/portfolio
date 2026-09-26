@@ -1177,7 +1177,29 @@ ul { list-style: none; }
   box-shadow: 0 0 0 2px var(--accent), 0 4px 16px rgba(0,0,0,0.1);
   transform: translateY(-2px);
 }
-.proj-card.hidden { display: none; }
+.proj-card.hidden        { display: none; }
+.proj-card.proj-beyond-fold { display: none; }
+
+.proj-show-more-wrap {
+  text-align: center;
+  padding: 28px 0 8px;
+}
+.proj-show-more-btn {
+  padding: 10px 28px;
+  border-radius: 8px;
+  border: 1.5px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.proj-show-more-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--accent-lt);
+}
 
 /* ── Per-category top border accent ── */
 .proj-layout:not(.panel-open) .proj-card--work        { border-top-color: #1d4ed8; }

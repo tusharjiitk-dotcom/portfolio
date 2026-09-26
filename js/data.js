@@ -338,7 +338,7 @@ const DATA = {
       category: 'work',
       result:   '🚀 Live · 14L+ Farmers',
       featured: true,
-      image:    'assets/images/projects/oncall-ai.svg',
+      image:    'assets/images/projects/oncall-ai.png',
       tags:     ['AI/ML', 'GovTech', 'PRD', 'Figma', 'Sprint Planning', 'Odisha'],
       summary:  'Led On-Call AI from product requirements to Go-Live - deploying farm advisory to 14+ lakh farmers across 30 districts.',
       detail: {
@@ -363,7 +363,7 @@ const DATA = {
       category: 'work',
       result:   '🏛️ State Mission Lead',
       featured: true,
-      image:    'assets/images/projects/odisha-dairy.svg',
+      image:    'assets/images/projects/odisha-dairy.png',
       tags:     ['Program Strategy', 'GovTech', 'Policy', 'Digital Roadmap', 'AgriTech'],
       summary:  'Anchored ₹1,500 Cr Mukhyamantri Kamdhenu Yojana end-to-end - policy, delivery, outreach targeting 2× milk productivity.',
       detail: {
@@ -388,7 +388,7 @@ const DATA = {
       category: 'work',
       result:   '⚙️ Deployed',
       featured: false,
-      image:    'assets/images/projects/n8n-agents.svg',
+      image:    'assets/images/projects/n8n-agents.png',
       tags:     ['n8n', 'AI Agents', 'OpenAI', 'Automation', 'SerpApi'],
       summary:  'Built n8n-based agent workflows: Resume Optimisation Agent and Research Agent using OpenAI + SerpApi.',
       detail: {
@@ -408,7 +408,7 @@ const DATA = {
       category: 'mba',
       result:   '🏢 Industry Project',
       featured: false,
-      image:    'assets/images/projects/datacat.svg',
+      image:    'assets/images/projects/datacat.png',
       tags:     ['Product Strategy', 'SME Analytics', 'API Roadmap', 'GTM', 'User Research'],
       summary:  'Industry project with Codewave - positioned DataCat as a competitive SME analytics tool; defined API roadmap and GTM strategy.',
       detail: {
@@ -427,7 +427,7 @@ const DATA = {
       category: 'mba',
       result:   '',
       featured: false,
-      image:    'assets/images/projects/maruti.svg',
+      image:    'assets/images/projects/maruti.png',
       tags:     ['Strategy', 'Decision Framework', 'CNG Expansion', 'Dashboard', 'BDDO'],
       summary:  'Built a data-driven decision framework for Maruti\'s CNG expansion with a real-time governance dashboard model.',
       detail: {
@@ -446,7 +446,7 @@ const DATA = {
       category: 'mba',
       result:   '',
       featured: false,
-      image:    'assets/images/projects/churn.svg',
+      image:    'assets/images/projects/churn.png',
       tags:     ['Advanced Analytics', 'ML', 'Logistic Regression', 'Decision Trees', 'KNN'],
       summary:  'Built predictive ML models to identify churn risk and designed segmented retention strategies.',
       detail: {
@@ -467,7 +467,7 @@ const DATA = {
       category: 'competition',
       result:   '🏆 1st Place',
       featured: true,
-      image:    'assets/images/projects/quicify.svg',
+      image:    'assets/images/projects/quicify.png',
       tags:     ['Product Strategy', 'Q-Commerce', 'GTM', 'Financial Model'],
       summary:  'Won 1st place at ProdXcelerate\'24 (BITS Goa). Full product strategy for a quick-commerce platform.',
       detail: {
@@ -487,7 +487,7 @@ const DATA = {
       category: 'competition',
       result:   'Participation',
       featured: false,
-      image:    'assets/images/projects/rapido.svg',
+      image:    'assets/images/projects/rapido.png',
       tags:     ['Urban Mobility', 'Design Thinking', 'User Research', 'Safety'],
       summary:  'Design Thinking-based product strategy to improve Rapido\'s safety and adoption among female urban users.',
       detail: {
@@ -510,7 +510,7 @@ const DATA = {
       category: 'mba',
       result:   '',
       featured: false,
-      image:    'assets/images/projects/piced.svg',
+      image:    'assets/images/projects/piced.png',
       tags:     ['Gen-AI', 'B2B', 'Agile', 'DevOps', 'Product Roadmap', 'GTM'],
       summary:  'End-to-end PM for a Gen-AI B2B EdTech platform — BMC, user personas, MOSCOW, roadmap, GTM, Agile implementation.',
       detail: {
@@ -531,7 +531,7 @@ const DATA = {
       category: 'mba',
       result:   '',
       featured: false,
-      image:    'assets/images/projects/finzo.svg',
+      image:    'assets/images/projects/finzo.png',
       tags:     ['FinTech', 'AI/ML', 'GTM', 'Business Model', 'Portfolio Optimisation'],
       summary:  'AI-powered retail investment platform simplifying stock selection and portfolio optimisation for time-strapped investors.',
       detail: {
@@ -552,7 +552,7 @@ const DATA = {
       category: 'mba',
       result:   '',
       featured: false,
-      image:    'assets/images/projects/purepaws.svg',
+      image:    'assets/images/projects/purepaws.png',
       tags:     ['D2C', 'Startup', 'Subscription', 'Pitch Deck', 'Pet Care'],
       summary:  'Monthly protein-rich, preservative-free dog treats subscription brand — full investor pitch with market research and brand narrative.',
       detail: {
@@ -573,7 +573,7 @@ const DATA = {
       category: 'mba',
       result:   '',
       featured: false,
-      image:    'assets/images/projects/colgate.svg',
+      image:    'assets/images/projects/colgate.png',
       tags:     ['Design Thinking', 'Rebranding', 'User Research', 'Brand Strategy'],
       summary:  'Redesigned Colgate\'s brand and product ecosystem using Design Thinking — bundled oral hygiene solution addressing freshness and value needs.',
       detail: {
@@ -593,7 +593,7 @@ const DATA = {
       category: 'mba',
       result:   '',
       featured: false,
-      image:    'assets/images/projects/industry.svg',
+      image:    'assets/images/projects/industry.png',
       tags:     ["Porter's Five Forces", 'Strategy', 'Automotive', 'Financial Analysis'],
       summary:  'Industry structure and competitive strategy analysis of the 4-wheeler automotive sector with M&M as focal firm.',
       detail: {
@@ -616,7 +616,7 @@ const DATA = {
       category: 'engineering',
       result:   '📄 Journal Published',
       featured: false,
-      image:    'assets/images/projects/thesis.svg',
+      image:    'assets/images/projects/thesis.png',
       tags:     ['MATLAB', 'Phase-Field Modelling', 'ABAQUS', 'LaTeX'],
       summary:  'Phase-field modelling of precipitate shapes with anisotropic energies. Published in MSMSE.',
       detail: {
@@ -635,7 +635,7 @@ const DATA = {
       category: 'engineering',
       result:   'Vice-Captain',
       featured: false,
-      image:    'assets/images/projects/supra.svg',
+      image:    'assets/images/projects/supra.png',
       tags:     ['CATIA V5', 'Suspension Design', 'Steering', 'FEA', 'Hypermesh', 'SAE'],
       summary:  'Vice-Captain & Technical Head. Designed, simulated and validated full F1 prototype chassis, suspension & steering. Paper published.',
       detail: {
@@ -657,7 +657,7 @@ const DATA = {
       category: 'engineering',
       result:   'Technical Head',
       featured: false,
-      image:    'assets/images/projects/baja.svg',
+      image:    'assets/images/projects/baja.png',
       tags:     ['ATV Design', 'CATIA V5', 'ANSYS', 'Simulation', 'Team Lead'],
       summary:  'Technical Head overseeing all departments for national ATV buggy design, simulation, manufacturing and racing.',
       detail: {
@@ -679,7 +679,7 @@ const DATA = {
       category: 'engineering',
       result:   '',
       featured: false,
-      image:    'assets/images/projects/bikestand.svg',
+      image:    'assets/images/projects/bikestand.png',
       tags:     ['Mechanism Design', 'Automation', 'B.Tech'],
       summary:  'Designed and built an automatic kick-stand mechanism for two-wheelers.',
       detail: {
@@ -698,7 +698,7 @@ const DATA = {
       category: 'self',
       result:   '📜 Patent Filed & Published',
       featured: true,
-      image:    'assets/images/projects/patent.svg',
+      image:    'assets/images/projects/patent.png',
       tags:     ['IP', 'Automotive', 'Innovation', 'R&D'],
       summary:  'Self-initiated patent: double safety hood latch for vehicles. Filed 2022, published 2024.',
       detail: {
@@ -718,7 +718,7 @@ const DATA = {
       category: 'self',
       result:   'Deployed at M&M',
       featured: false,
-      image:    'assets/images/projects/powerbi.svg',
+      image:    'assets/images/projects/powerbi.png',
       tags:     ['Power BI', 'Data Visualisation', 'Project Management'],
       summary:  'Self-built PowerBI dashboard for tracking quality metrics across tractor projects at M&M.',
       detail: {

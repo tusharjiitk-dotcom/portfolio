@@ -545,14 +545,21 @@ let _activeProjId = null;
 
 const _catLabel = { work: 'Professional', mba: 'MBA', engineering: 'Engineering', self: 'Self Work', competition: 'Competition' };
 
+const PROJ_INIT = 6;
+
 function renderProjects() {
   const el = document.getElementById('projects-content');
   if (!el) return;
 
-  const cardsHTML = DATA.projects.map(p => `
+  const cardsHTML = DATA.projects.map(p => {
+    const svgFallback = p.image ? p.image.replace(/\.png$/i, '.svg') : '';
+    const thumb = p.image
+      ? `<img src="${p.image}" alt="${p.title}" onerror="this.onerror=null;this.src='${svgFallback}'">`
+      : `<span class="proj-thumb-letter">${p.title.charAt(0)}</span>`;
+    return `
     <div class="proj-card proj-card--${p.category} fade-in" id="proj-card-${p.id}" data-cat="${p.category}" onclick="openProjPanel('${p.id}')">
       <div class="proj-thumb">
-        ${p.image ? `<img src="${p.image}" alt="${p.title}">` : `<span class="proj-thumb-letter">${p.title.charAt(0)}</span>`}
+        ${thumb}
         ${p.result ? `<div class="proj-result">${p.result}</div>` : ''}
       </div>
       <div class="proj-body">
@@ -561,23 +568,58 @@ function renderProjects() {
         <div class="proj-desc">${p.summary}</div>
         <div class="proj-tags">${p.tags.slice(0,3).map(t => `<span class="chip">${t}</span>`).join('')}</div>
       </div>
-    </div>`).join('');
+    </div>`;
+  }).join('');
 
   el.innerHTML = `
     <div class="proj-layout" id="proj-layout">
       <div class="proj-cards-col">
         <div class="proj-grid" id="proj-grid">${cardsHTML}</div>
+        <div class="proj-show-more-wrap" id="proj-show-more-wrap" style="display:none;">
+          <button class="proj-show-more-btn" onclick="showMoreProjects()">
+            Show More <span id="proj-more-count"></span>
+          </button>
+        </div>
       </div>
       <div class="proj-detail-col" id="proj-detail-col">
         <div class="proj-panel" id="proj-panel"></div>
       </div>
     </div>`;
+
+  _applyShowMoreLimit();
+}
+
+function _applyShowMoreLimit() {
+  const visible = [...document.querySelectorAll('#proj-grid .proj-card:not(.hidden)')];
+  const beyond  = visible.slice(PROJ_INIT);
+  visible.slice(0, PROJ_INIT).forEach(c => c.classList.remove('proj-beyond-fold'));
+  beyond.forEach(c => c.classList.add('proj-beyond-fold'));
+
+  const wrap = document.getElementById('proj-show-more-wrap');
+  if (!wrap) return;
+  if (beyond.length > 0) {
+    wrap.style.display = '';
+    document.getElementById('proj-more-count').textContent = `(+${beyond.length} more)`;
+  } else {
+    wrap.style.display = 'none';
+  }
+}
+
+function showMoreProjects() {
+  document.querySelectorAll('#proj-grid .proj-card.proj-beyond-fold').forEach(c => {
+    c.classList.remove('proj-beyond-fold');
+    setTimeout(() => c.classList.add('visible'), 30);
+  });
+  document.getElementById('proj-show-more-wrap').style.display = 'none';
 }
 
 function filterProjects(cat, btn) {
   currentFilter = cat;
   document.querySelectorAll('.filter-bar .ftab').forEach(t => t.classList.remove('active'));
   btn.classList.add('active');
+
+  // Remove beyond-fold before re-evaluating visibility
+  document.querySelectorAll('#proj-grid .proj-card').forEach(c => c.classList.remove('proj-beyond-fold'));
 
   document.querySelectorAll('#proj-grid .proj-card').forEach(card => {
     const show = cat === 'all' || card.dataset.cat === cat;
@@ -587,6 +629,8 @@ function filterProjects(cat, btn) {
       setTimeout(() => card.classList.add('visible'), 30);
     }
   });
+
+  _applyShowMoreLimit();
 
   if (_activeProjId) {
     const active = DATA.projects.find(p => p.id === _activeProjId);
