@@ -145,20 +145,21 @@
             <div class="contact-link-icon">↓</div>Download Resume (PDF)
           </a>
         </div>
-        <form onsubmit="return false;">
+        <form id="contact-form" onsubmit="handleContactForm(event)">
           <div class="form-group">
             <label class="form-label">Name</label>
-            <input class="form-input" type="text" placeholder="Your name">
+            <input class="form-input" id="cf-name" type="text" placeholder="Your name" required>
           </div>
           <div class="form-group">
             <label class="form-label">Email</label>
-            <input class="form-input" type="email" placeholder="your@email.com">
+            <input class="form-input" id="cf-email" type="email" placeholder="your@email.com" required>
           </div>
           <div class="form-group">
             <label class="form-label">Message</label>
-            <textarea class="form-input form-textarea" placeholder="Your message..."></textarea>
+            <textarea class="form-input form-textarea" id="cf-msg" placeholder="Your message..." required></textarea>
           </div>
-          <button type="submit" class="btn btn-primary">Send Message →</button>
+          <button type="submit" class="btn btn-primary" id="cf-btn">Send Message →</button>
+          <div id="cf-status" style="display:none;margin-top:12px;font-size:13px;color:var(--accent);font-weight:600;"></div>
         </form>
       </div>
     </div>

@@ -265,7 +265,7 @@ function renderExperience() {
            id="exp-card-${e.id}"
            onclick="openExpPanel('${e.id}')">
         <div class="exp-card-top">
-          <div class="exp-logo">${e.icon}</div>
+          <div class="exp-logo${e.logo ? ' exp-logo--img' : ''}">${e.logo ? `<img src="${e.logo}" alt="${e.company}">` : e.icon}</div>
           <div class="exp-info">
             <div class="exp-role">${e.role}${e.duration === 'Current' ? ' <span class="exp-current-badge">● Current</span>' : ''}</div>
             <div class="exp-company">${e.company}</div>
@@ -281,7 +281,6 @@ function renderExperience() {
   el.innerHTML = `
     <div class="exp-layout" id="exp-layout">
       <div class="exp-timeline-col">
-        <button class="exp-tl-close" onclick="closeExpPanel()">← Close panel</button>
         <div class="timeline">${timelineHTML}</div>
       </div>
       <div class="exp-detail-col" id="exp-detail-col">
@@ -296,6 +295,8 @@ function renderExperience() {
 let _activeExpId = null;
 
 function openExpPanel(id) {
+  if (_activeExpId === id) { closeExpPanel(); return; }
+
   const exp = DATA.experience.find(e => e.id === id);
   if (!exp) return;
 
@@ -307,8 +308,12 @@ function openExpPanel(id) {
   ).join('');
 
 
-  const impactHTML = (exp.impactMetrics || []).map(m =>
-    `<div class="ep-impact-stat"><div class="ep-impact-val">${m.val}</div><div class="ep-impact-label">${m.label}</div></div>`
+  const impactHTML = (exp.impactMetrics || []).map((m, i) =>
+    `<div class="ep-impact-stat ep-impact-stat--${i+1}">
+      <div class="ep-impact-icon">${m.icon || '📊'}</div>
+      <div class="ep-impact-val">${m.val}</div>
+      <div class="ep-impact-label">${m.label}</div>
+    </div>`
   ).join('');
 
   const achHTML = exp.achievements.map(a =>
@@ -324,11 +329,10 @@ function openExpPanel(id) {
 
   document.getElementById('exp-panel').innerHTML = `
     <div class="ep-header">
-      <div class="ep-header-logo">${exp.icon}</div>
+      <div class="ep-header-logo${exp.logo ? ' ep-header-logo--img' : ''}">${exp.logo ? `<img src="${exp.logo}" alt="${exp.company}">` : exp.icon}</div>
       <div class="ep-header-text">
         <div class="ep-header-meta">${typeLabel} · ${exp.period.toUpperCase()}</div>
         <h2 class="ep-header-role">${exp.role}</h2>
-        <div class="ep-header-company">${exp.company}</div>
       </div>
     </div>
     <div class="ep-body">
@@ -407,58 +411,167 @@ function closeExpPanel() {
 function renderEducation() {
   const el = document.getElementById('education-content');
   if (!el) return;
-  el.innerHTML = `<div class="edu-grid">${DATA.education.map(e => `
-    <div class="edu-card fade-in" onclick="openPanel('edu-${e.id}')">
-      <div class="edu-badge edu-badge-${e.theme}">${e.badge}</div>
+
+  const journeyHTML = `
+    <div class="edu-journey fade-in">
+      <div class="edu-journey-step">
+        <div class="edu-journey-icon edu-journey-icon--green">🏗️</div>
+        <div class="edu-journey-label">Engineering<br>Foundation</div>
+      </div>
+      <div class="edu-journey-arrow"></div>
+      <div class="edu-journey-step">
+        <div class="edu-journey-icon edu-journey-icon--gold">⚙️</div>
+        <div class="edu-journey-label">Systems<br>Excellence</div>
+      </div>
+      <div class="edu-journey-arrow"></div>
+      <div class="edu-journey-step">
+        <div class="edu-journey-icon edu-journey-icon--blue">🚀</div>
+        <div class="edu-journey-label">Strategic<br>Leadership</div>
+      </div>
+    </div>`;
+
+  const cardsHTML = DATA.education.map(e => `
+    <div class="edu-card fade-in edu-card-${e.theme}" id="edu-card-${e.id}" onclick="openEduPanel('${e.id}')">
+      <div class="edu-logo-circle edu-logo-${e.theme}">${e.logoIcon}</div>
       <div class="edu-degree">${e.degree}</div>
+      <div class="edu-field">${e.field}</div>
       <div class="edu-school edu-school-${e.theme}">${e.school}</div>
-      <div class="edu-meta">${e.score}</div>
-      ${e.medal ? `<div class="edu-medal edu-medal-${e.theme}">${e.medal}</div>` : ''}
-      <div class="edu-click-hint">Click for details →</div>
-    </div>`).join('')}</div>`;
+      <div class="edu-meta">${e.period} · ${e.score}</div>
+      ${e.medal ? `<div class="edu-medal-box edu-medal-${e.theme}">${e.medal}</div>` : ''}
+      <div class="edu-view-link">View details →</div>
+    </div>`).join('');
+
+  el.innerHTML = `
+    <div class="edu-layout" id="edu-layout">
+      <div class="edu-cards-col">
+        ${journeyHTML}
+        <div class="edu-grid">${cardsHTML}</div>
+      </div>
+      <div class="edu-detail-col" id="edu-detail-col">
+        <div class="edu-panel" id="edu-panel"></div>
+      </div>
+    </div>`;
+}
+
+/* ─────────────────────────────────────────
+   EDUCATION INLINE PANEL
+───────────────────────────────────────── */
+let _activeEduId = null;
+
+function openEduPanel(id) {
+  if (_activeEduId === id) { closeEduPanel(); return; }
+
+  const edu = DATA.education.find(e => e.id === id);
+  if (!edu) return;
+  _activeEduId = id;
+
+  const overviewHTML = `
+    <div class="edp-overview-desc">${edu.overview}</div>
+    <div class="edp-stats-row">
+      ${edu.overviewStats.map(s => `<div class="edp-stat"><div class="edp-stat-val">${s.val}</div><div class="edp-stat-label">${s.label}</div></div>`).join('')}
+    </div>
+    ${edu.medal ? `<div class="edp-achievement-box">
+      <div class="edp-ach-icon">🏅</div>
+      <div><div class="edp-ach-title">${edu.medal}</div><div class="edp-ach-desc">Awarded for outstanding academic performance and overall excellence.</div></div>
+    </div>` : ''}
+    <div class="edp-highlights-title">Key Highlights</div>
+    ${edu.keyHighlights.map(h => `<div class="edp-highlight-item">${h}</div>`).join('')}`;
+
+  const achievementsHTML = edu.details.map(d =>
+    `<div class="edp-detail-item"><span class="edp-detail-arrow">→</span><span>${d}</span></div>`
+  ).join('');
+
+  const learningsHTML = `<div class="edp-tags-grid">${edu.keyLearnings.map(l => `<span class="chip chip-blue">${l}</span>`).join('')}</div>`;
+
+  const focusHTML = `<div class="edp-tags-grid">${edu.focusAreas.map(f => `<span class="chip">${f}</span>`).join('')}</div>`;
+
+  document.getElementById('edu-panel').innerHTML = `
+    <div class="edp-header">
+      <div class="edp-logo edu-logo-${edu.theme}">${edu.logoIcon}</div>
+      <div class="edp-header-text">
+        <div class="edp-period">${edu.period}</div>
+        <div class="edp-title">${edu.degree}</div>
+        <div class="edp-school edu-school-${edu.theme}">${edu.school}</div>
+      </div>
+      ${edu.medal ? `<span class="edp-medal-badge">${edu.medal}</span>` : ''}
+    </div>
+    <div class="edp-tabs">
+      <button class="edp-tab active" onclick="switchEduTab('overview',this)">Overview</button>
+      <button class="edp-tab" onclick="switchEduTab('achievements',this)">Achievements</button>
+      <button class="edp-tab" onclick="switchEduTab('learnings',this)">Key Learnings</button>
+      <button class="edp-tab" onclick="switchEduTab('focus',this)">Focus Areas</button>
+    </div>
+    <div class="edp-body">
+      <div class="edp-pane active" id="edp-overview">${overviewHTML}</div>
+      <div class="edp-pane" id="edp-achievements">${achievementsHTML}</div>
+      <div class="edp-pane" id="edp-learnings">${learningsHTML}</div>
+      <div class="edp-pane" id="edp-focus">${focusHTML}</div>
+    </div>
+    <div class="edp-footer">
+      <button class="edp-close-btn" onclick="closeEduPanel()">← Return to Education</button>
+    </div>`;
+
+  document.getElementById('edu-layout').classList.add('panel-open');
+  document.querySelectorAll('.edu-card').forEach(c => c.classList.remove('active'));
+  document.getElementById(`edu-card-${id}`)?.classList.add('active');
+
+  setTimeout(() => {
+    if (window.innerWidth >= 900) {
+      document.getElementById('education')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    } else {
+      document.getElementById('edu-detail-col')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }, 80);
+}
+
+function closeEduPanel() {
+  _activeEduId = null;
+  document.getElementById('edu-layout')?.classList.remove('panel-open');
+  document.querySelectorAll('.edu-card').forEach(c => c.classList.remove('active'));
+}
+
+function switchEduTab(tab, btn) {
+  document.querySelectorAll('.edp-tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.edp-pane').forEach(p => p.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById(`edp-${tab}`)?.classList.add('active');
 }
 
 /* ─────────────────────────────────────────
    PROJECTS
 ───────────────────────────────────────── */
 let currentFilter = 'all';
+let _activeProjId = null;
+
+const _catLabel = { work: 'Professional', mba: 'MBA', engineering: 'Engineering', self: 'Self Work', competition: 'Competition' };
 
 function renderProjects() {
   const el = document.getElementById('projects-content');
   if (!el) return;
 
-  const featured = DATA.projects.find(p => p.featured && p.category === 'competition');
-  const rest = DATA.projects.filter(p => !p.featured);
-
-  const featuredHTML = featured ? `
-    <div class="proj-featured fade-in" data-cat="${featured.category}" onclick="openPanel('proj-${featured.id}')">
-      <div>
-        <div class="feat-badge">${featured.result} · Featured</div>
-        <div class="feat-title">${featured.title}</div>
-        <div class="feat-desc">${featured.summary}</div>
-        <div class="feat-chips">${featured.tags.map(t => `<span class="feat-chip">${t}</span>`).join('')}</div>
-      </div>
-      <div class="feat-thumb">
-        ${featured.image ? `<img src="${featured.image}" alt="${featured.title}">` : 'Project cover / deck'}
-      </div>
-    </div>` : '';
-
-  const cardsHTML = rest.map(p => `
-    <div class="proj-card fade-in" data-cat="${p.category}" onclick="openPanel('proj-${p.id}')">
+  const cardsHTML = DATA.projects.map(p => `
+    <div class="proj-card proj-card--${p.category} fade-in" id="proj-card-${p.id}" data-cat="${p.category}" onclick="openProjPanel('${p.id}')">
       <div class="proj-thumb">
-        ${p.image ? `<img src="${p.image}" alt="${p.title}">` : p.title.charAt(0)}
-        <div class="proj-thumb-cat">${p.category.toUpperCase()}</div>
+        ${p.image ? `<img src="${p.image}" alt="${p.title}">` : `<span class="proj-thumb-letter">${p.title.charAt(0)}</span>`}
         ${p.result ? `<div class="proj-result">${p.result}</div>` : ''}
       </div>
       <div class="proj-body">
-        <div class="proj-cat">${p.category.replace('self','Self Work').replace('mba','MBA').replace('engineering','Engineering').replace('competition','Competition')}</div>
+        <div class="proj-cat">${_catLabel[p.category] || p.category}</div>
         <div class="proj-name">${p.title}</div>
         <div class="proj-desc">${p.summary}</div>
         <div class="proj-tags">${p.tags.slice(0,3).map(t => `<span class="chip">${t}</span>`).join('')}</div>
       </div>
     </div>`).join('');
 
-  el.innerHTML = `<div class="proj-grid" id="proj-grid">${featuredHTML}${cardsHTML}</div>`;
+  el.innerHTML = `
+    <div class="proj-layout" id="proj-layout">
+      <div class="proj-cards-col">
+        <div class="proj-grid" id="proj-grid">${cardsHTML}</div>
+      </div>
+      <div class="proj-detail-col" id="proj-detail-col">
+        <div class="proj-panel" id="proj-panel"></div>
+      </div>
+    </div>`;
 }
 
 function filterProjects(cat, btn) {
@@ -466,15 +579,81 @@ function filterProjects(cat, btn) {
   document.querySelectorAll('.filter-bar .ftab').forEach(t => t.classList.remove('active'));
   btn.classList.add('active');
 
-  document.querySelectorAll('#proj-grid [data-cat]').forEach(card => {
+  document.querySelectorAll('#proj-grid .proj-card').forEach(card => {
     const show = cat === 'all' || card.dataset.cat === cat;
     card.classList.toggle('hidden', !show);
     if (show) {
-      // re-trigger fade
       card.classList.remove('visible');
       setTimeout(() => card.classList.add('visible'), 30);
     }
   });
+
+  if (_activeProjId) {
+    const active = DATA.projects.find(p => p.id === _activeProjId);
+    if (active && cat !== 'all' && active.category !== cat) closeProjPanel();
+  }
+}
+
+function openProjPanel(id) {
+  if (_activeProjId === id) { closeProjPanel(); return; }
+
+  const proj = DATA.projects.find(p => p.id === id);
+  if (!proj) return;
+  _activeProjId = id;
+  const d = proj.detail;
+
+  const detailRowsHTML = (d.highlights || []).map(h =>
+    `<div class="prp-detail-row"><div class="prp-detail-key">${h.label}</div><div class="prp-detail-val">${h.val}</div></div>`
+  ).join('');
+
+  const achievementsHTML = (d.achievements || []).map(a =>
+    `<div class="prp-ach-item"><span class="prp-ach-arrow">→</span><span>${a}</span></div>`
+  ).join('');
+
+  document.getElementById('proj-panel').innerHTML = `
+    <div class="prp-header prp-header--${proj.category}">
+      <div class="prp-header-top">
+        <div>
+          <div class="prp-header-meta">
+            <span class="prp-header-cat">${_catLabel[proj.category] || proj.category}</span>
+            ${proj.result ? `<span class="prp-result-badge">${proj.result}</span>` : ''}
+          </div>
+          <div class="prp-title">${proj.title}</div>
+        </div>
+        ${d.link && d.link !== '#'
+          ? `<a class="prp-collateral-btn prp-collateral-btn--active" href="${d.link}" target="_blank" rel="noopener"><span class="prp-coll-icon">📎</span><span>View Deck</span><span class="prp-coll-arrow">↗</span></a>`
+          : `<span class="prp-collateral-btn prp-collateral-btn--empty" title="No deck linked yet"><span class="prp-coll-icon">📎</span><span>View Deck</span><span class="prp-coll-arrow">↗</span></span>`}
+      </div>
+    </div>
+    <div class="prp-body">
+      <div class="prp-overview-desc">${d.desc}</div>
+      ${d.outcome ? `<div class="prp-outcome-box"><span class="prp-outcome-label">Outcome</span><span class="prp-outcome-text">${d.outcome}</span></div>` : ''}
+      ${detailRowsHTML ? `<div class="prp-section-divider"></div><div class="prp-details">${detailRowsHTML}</div>` : ''}
+      ${achievementsHTML ? `<div class="prp-section-divider"></div><div class="prp-achievements">${achievementsHTML}</div>` : ''}
+      <div class="prp-section-divider"></div>
+      <div class="prp-tags-grid">${proj.tags.map(t => `<span class="chip chip-blue">${t}</span>`).join('')}</div>
+    </div>
+    <div class="prp-footer">
+      <button class="prp-close-btn" onclick="closeProjPanel()">← Back to projects</button>
+    </div>`;
+
+  document.getElementById('proj-layout').classList.add('panel-open');
+  document.querySelectorAll('.proj-card').forEach(c => c.classList.remove('active'));
+  document.getElementById(`proj-card-${id}`)?.classList.add('active');
+
+  setTimeout(() => {
+    if (window.innerWidth >= 900) {
+      document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    } else {
+      document.getElementById('proj-detail-col')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }, 80);
+}
+
+function closeProjPanel() {
+  _activeProjId = null;
+  document.getElementById('proj-layout')?.classList.remove('panel-open');
+  document.querySelectorAll('.proj-card').forEach(c => c.classList.remove('active'));
 }
 
 /* ─────────────────────────────────────────
@@ -882,4 +1061,24 @@ function initScrollAnimations() {
   setTimeout(() => {
     document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
   }, 100);
+}
+
+/* ─────────────────────────────────────────
+   CONTACT FORM
+───────────────────────────────────────── */
+function handleContactForm(e) {
+  e.preventDefault();
+  const name  = document.getElementById('cf-name').value.trim();
+  const email = document.getElementById('cf-email').value.trim();
+  const msg   = document.getElementById('cf-msg').value.trim();
+  const to    = DATA.personal.email;
+  const subj  = encodeURIComponent(`Portfolio Enquiry from ${name}`);
+  const body  = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${msg}`);
+
+  window.open(`mailto:${to}?subject=${subj}&body=${body}`, '_blank');
+
+  const status = document.getElementById('cf-status');
+  status.textContent = '✓ Opening your mail client…';
+  status.style.display = 'block';
+  setTimeout(() => { status.style.display = 'none'; }, 4000);
 }
