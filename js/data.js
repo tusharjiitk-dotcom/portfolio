@@ -108,7 +108,7 @@ const DATA = {
         { icon: '🐄', text: 'Anchored ₹1,500 Cr Odisha dairy mission (Mukhyamantri Kamdhenu Yojana) end-to-end - policy, delivery & outreach to target 2× milk productivity' },
         { icon: '🗺️', text: 'Developed ₹50 Cr+ programme roadmaps with phased reform milestones and digital plans across 15+ districts in Odisha' },
         { icon: '📋', text: 'Authored scope documents and RFPs for 8 digital modules in a ₹9 Cr agriculture digital transformation programme in Odisha' },
-        { icon: '🤖', text: 'Led On-Call AI from product requirements to Go-Live; deployed advisory services to 14+ lakh farmers across 30 districts' },
+        { icon: '🤖', text: 'Led On-Call AI from product requirements to Go-Live; deployed service booking platform to 14+ lakh farmers across 30 districts' },
         { icon: '🗂️', text: 'Owned product roadmap, authored PRDs & Figma wireframes; drove sprint planning and vendor management for pilot testing' },
         { icon: '📊', text: 'Optimised farmer helpline via 1,880-farmer survey and 4 A/B experiments; authored SOPs improving service accuracy for Odisha' },
         { icon: '🗃️', text: 'Built 90 lakh+ citizen database integrating Aadhaar and PM-KISAN records with sanitisation logic targeting 82% coverage' },
@@ -334,15 +334,15 @@ const DATA = {
     // ── PROFESSIONAL WORK ───────────────────
     {
       id:       'oncall-ai',
-      title:    'On-Call AI - Farmer Advisory at Scale',
+      title:    'On-Call AI - Farmer Service Booking Platform',
       category: 'work',
       result:   '🚀 Live · 14L+ Farmers',
       featured: true,
       image:    'assets/images/projects/oncall-ai.png',
       tags:     ['AI/ML', 'GovTech', 'PRD', 'Figma', 'Sprint Planning', 'Odisha'],
-      summary:  'Led On-Call AI from product requirements to Go-Live - deploying farm advisory to 14+ lakh farmers across 30 districts.',
+      summary:  'Led On-Call AI from product requirements to Go-Live - a service booking platform connecting 14+ lakh farmers to agri services across 30 districts.',
       detail: {
-        desc:    'Owned the product roadmap for an AI-powered On-Call advisory system for farmers in Odisha. Authored PRDs, built Figma wireframes, drove sprint planning and vendor management through pilot to full rollout. The system uses text-to-speech and voice response - 11 modules automating the farmer advisory pipeline.',
+        desc:    'Owned the product roadmap for an AI-powered On-Call service booking platform for farmers in Odisha. Authored PRDs, built Figma wireframes, drove sprint planning and vendor management through pilot to full rollout. The system uses text-to-speech and voice response - 11 modules automating the farmer service booking pipeline.',
         outcome: '14+ lakh farmers reached across 30 districts, Odisha',
         highlights: [
           { label: 'Organisation', val: 'Samagra Governance Consulting' },
