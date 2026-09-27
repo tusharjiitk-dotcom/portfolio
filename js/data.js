@@ -358,31 +358,6 @@ const DATA = {
       },
     },
     {
-      id:       'odisha-dairy',
-      title:    'Odisha Dairy Mission - ₹1,500 Cr Program',
-      category: 'work',
-      result:   '🏛️ State Mission Lead',
-      featured: true,
-      image:    'assets/images/projects/odisha-dairy.png',
-      tags:     ['Program Strategy', 'GovTech', 'Policy', 'Digital Roadmap', 'AgriTech'],
-      summary:  'Anchored ₹1,500 Cr Mukhyamantri Kamdhenu Yojana end-to-end - policy, delivery, outreach targeting 2× milk productivity.',
-      detail: {
-        desc:    'End-to-end ownership of Odisha\'s flagship dairy mission. Developed ₹50 Cr+ programme roadmaps with phased reform milestones and digital plans across 15+ districts. Managed programme reviews and steering across 3 state ministries. Built a 90 lakh+ citizen database integrating Aadhaar and PM-KISAN records.',
-        outcome: 'State-wide dairy programme steering · 2× milk productivity target',
-        highlights: [
-          { label: 'Organisation', val: 'Samagra Governance Consulting' },
-          { label: 'Program Size', val: '₹1,500 Cr - State Mission' },
-          { label: 'Roadmap',      val: '₹50 Cr+ phased across 15+ districts' },
-          { label: 'Database',     val: '90 lakh+ citizens - Aadhaar + PM-KISAN' },
-        ],
-        achievements: [
-          'Managed programme reviews & steering across 3 state ministries',
-          'Built 90 lakh+ citizen database with 82% coverage target',
-          'Authored scope documents and RFPs for 8 digital modules (₹9 Cr Agri DT programme)',
-        ],
-      },
-    },
-    {
       id:       'n8n-agents',
       title:    'n8n AI Agent Workflows - Resume & Research',
       category: 'work',
