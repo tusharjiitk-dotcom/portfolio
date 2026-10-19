@@ -1,6 +1,0 @@
-﻿<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
-  <rect width="800" height="500" fill="#1e3a8a"/>
-  <rect x="0" y="0" width="800" height="4" fill="#60a5fa" opacity="0.6"/>
-  <text x="400" y="210" font-family="system-ui,sans-serif" font-size="52" font-weight="700" fill="#60a5fa" text-anchor="middle">On-Call AI</text>
-  <text x="400" y="280" font-family="system-ui,sans-serif" font-size="18" fill="#60a5fa" opacity="0.5" text-anchor="middle">Replace with: oncall-ai.jpg</text>
-</svg>
