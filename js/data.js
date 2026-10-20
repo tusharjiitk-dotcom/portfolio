@@ -90,19 +90,13 @@ const DATA = {
       employmentType: 'Full-time',
       teamSize:       'Cross-functional',
       tags:     ['GovTech', 'Digital Transformation', 'AI/Product', 'Program Strategy', 'AgriTech', 'DPI', 'Change Management', 'PRD'],
-      summary:  'Driving mission-mode program management, digital public infrastructure & AI product execution for large-scale government programmes in Odisha — Agriculture, Nutrition & Allied Sectors.',
+      summary:  'Driving mission-mode program management, digital transformation & AI product execution for large-scale government programmes — from policy to ground-level delivery at state scale.',
       focusAreas: [
         { icon: '📊', label: 'Program Management' },
         { icon: '💻', label: 'Digital Public Infrastructure' },
         { icon: '🤖', label: 'AI Product Execution' },
         { icon: '🥗', label: 'Change Management' },
         { icon: '📈', label: 'Impact Measurement' },
-      ],
-      impactMetrics: [
-        { val: '14L+', label: 'Farmers Reached' },
-        { val: '90L+', label: 'Citizen Records' },
-        { val: '7+',   label: 'AI Use Cases' },
-        { val: '₹1,500Cr', label: 'Programme Anchored' },
       ],
       achievements: [
         { icon: '🥗', text: 'Driving mission-mode change management for a statewide child-nutrition elimination programme — architecting system inputs, field motivation & assessments, review/monitoring cadences, and district-level ownership structures across Odisha' },
@@ -135,12 +129,6 @@ const DATA = {
         { icon: '📊', label: 'Data Analytics' },
         { icon: '👥', label: 'Team Leadership' },
         { icon: '🔄', label: 'Change Management' },
-      ],
-      impactMetrics: [
-        { val: '₹100Cr+', label: 'Capex Led' },
-        { val: '150+',    label: 'Components Released' },
-        { val: '220+',    label: 'Issues Resolved' },
-        { val: '80%+',    label: 'Component Commonality' },
       ],
       achievements: [
         { icon: '💰', text: 'Led ₹100 Cr+ styling programme releasing 150+ components across Swaraj 855 & 744 tractors on quality, cost and delivery' },
