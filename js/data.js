@@ -504,7 +504,7 @@ const DATA = {
     {
       "id": "quicify",
       "title": "Quicify - Q-Commerce Product Strategy",
-      "category": "competition",
+      "category": "self",
       "result": "🏆 1st Place",
       "featured": true,
       "image": "assets/images/projects/quicify.png",
@@ -538,7 +538,7 @@ const DATA = {
     {
       "id": "rapido",
       "title": "Rapido - Urban Transport for Female Users",
-      "category": "competition",
+      "category": "self",
       "result": "Participation",
       "featured": false,
       "image": "assets/images/projects/rapido.png",
@@ -782,7 +782,7 @@ const DATA = {
       "detail": {
         "desc": "M.Tech thesis, Department of Mechanical Engineering, IIT Kanpur (July 2018; supervisor: Dr. Anurag Gupta). Developed a general numerical technique for the equilibrium shape of a misfitting precipitate in a matrix, accounting for anisotropy in both interfacial and elastic bulk energies; earlier shape-optimisation work had ignored anisotropic interfacial energy. Coded in MATLAB and C++: the extended finite element method (XFEM) computes the stress field around a moving interface, and a level set method moves the interface using interfacial and elastic velocity components. Verified the code against known isotropic results, then studied single and interacting precipitates with anisotropic interfaces, covering stability, bifurcation and loss of symmetry. CPI: 10/10. Published as T. Joshi, R. Arora, A. Basak and A. Gupta, 'Equilibrium shape of misfitting precipitates with anisotropic elasticity and anisotropic interfacial energy', Modelling Simul. Mater. Sci. Eng. 28 (2020) 075009.",
         "outcome": "Published in Modelling and Simulation in Materials Science and Engineering 28 (2020) 075009 · doi.org/10.1088/1361-651X/abae12",
-        "link": "https://drive.google.com/file/d/1O03YuKBJgkSHYsqj3Luq1Mm7RxKzThWA/view?usp=sharing",
+        "link": "https://drive.google.com/file/d/1gkJJs5b7EnkZl5FGzZwxpa2QSIU6nOSO/view",
         "highlights": [
           {
             "label": "Institute",
