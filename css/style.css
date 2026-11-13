@@ -877,9 +877,19 @@ ul { list-style: none; }
 .dp-header {
   position: sticky; top: 0;
   background: var(--surface); border-bottom: 1px solid var(--border);
-  padding: 18px 24px; display: flex; align-items: center; gap: 12px;
+  padding: 14px 20px 16px; display: flex; flex-direction: column; gap: 10px;
   z-index: 5; flex-shrink: 0;
 }
+.dp-back-btn {
+  display: inline-flex; align-items: center; gap: 5px;
+  padding: 6px 13px; background: var(--surface-2);
+  border: 1.5px solid var(--border); border-radius: 8px;
+  font-size: 12.5px; font-weight: 600; color: var(--text-mid);
+  cursor: pointer; transition: all 0.18s; font-family: var(--font);
+  align-self: flex-start;
+}
+.dp-back-btn:hover { background: var(--accent-lt); color: var(--accent); border-color: var(--accent-bd); }
+.dp-header-row { display: flex; align-items: center; gap: 12px; }
 .dp-header-info { flex: 1; min-width: 0; }
 .dp-type  { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent); margin-bottom: 3px; }
 .dp-title-sm { font-size: 15px; font-weight: 700; color: var(--text); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }

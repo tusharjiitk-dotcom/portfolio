@@ -171,11 +171,14 @@
   <div class="panel-overlay" id="panel-overlay"></div>
   <div class="detail-panel" id="detail-panel">
     <div class="dp-header">
-      <div class="dp-header-info">
-        <div class="dp-type" id="dp-type"></div>
-        <div class="dp-title-sm" id="dp-title-sm"></div>
+      <button class="dp-back-btn" onclick="closePanel()">← Back</button>
+      <div class="dp-header-row">
+        <div class="dp-header-info">
+          <div class="dp-type" id="dp-type"></div>
+          <div class="dp-title-sm" id="dp-title-sm"></div>
+        </div>
+        <button class="dp-close" onclick="closePanel()">✕</button>
       </div>
-      <button class="dp-close" onclick="closePanel()">✕</button>
     </div>
     <div class="dp-body">
       <div class="dp-badge" id="dp-badge-wrap"></div>

@@ -361,7 +361,7 @@ const DATA = {
     {
       "id": "n8n-agents",
       "title": "n8n AI Agent Workflows - Resume & Research",
-      "category": "work",
+      "category": "self",
       "result": "⚙️ Built & Demoed",
       "featured": false,
       "image": "assets/images/projects/n8n-agents.png",
