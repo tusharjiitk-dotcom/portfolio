@@ -592,7 +592,7 @@ const DATA = {
       "detail": {
         "desc": "Two-course project for PicED — a Gen-AI B2B platform that turns complex teaching concepts into visuals, memes and animations for educators. Course 1, Product Management (IIM Udaipur, guide: Prof. Malthi Satish): user research (73% of educators said making visually appealing content takes too much effort), competitor and market analysis, Business Model Canvas, personas, MoSCoW feature prioritisation, low-fidelity wireframes, MVP, product roadmap, success metrics (DAU, NPS, retention, ARPU, MRR) and GTM strategy. Course 2, Agile & DevOps: a vocabulary-learning version with user segmentation and a pricing survey, run over 3 sprints with a Kanban board, story points, sprint backlogs, daily scrums and retrospectives on Miro.",
         "outcome": "Full PM lifecycle deliverable — Strategy + Agile implementation",
-        "link": "https://drive.google.com/file/d/1HngpOSLjC04FM8EkURMZw913lI6PaBqi/view",
+        "link": "https://drive.google.com/file/d/15guY8D0Vj-kcsezJL1NhrcmxqJlmSftL/view",
         "highlights": [
           {
             "label": "Guide",
@@ -631,7 +631,7 @@ const DATA = {
       "detail": {
         "desc": "Conceptualised FinZo — a GenAI investment assistant for time-strapped retail investors, built around the persona 'Anita', a busy professional investing on friends' tips. Provides stock-selection insights, portfolio optimisation and risk profiling. Covered customer journey, Business Model Canvas, market research, feature prioritisation and roadmap, technical architecture (React / React Native, Node.js, PostgreSQL + Redis, AWS, Alpha Vantage and Plaid APIs), 5-year financial projections (30k users in year 1), GTM and valuation (₹6 Cr ask for 10% equity, ₹60 Cr post-money). Industry FinTech course project, IIM Udaipur (guide: Sriram Natarajan).",
         "outcome": "Full business plan + GTM deliverable",
-        "link": "https://drive.google.com/file/d/1oJVFTQ9RqKuX4HlKGsCr5sjcH6H9L2vw/view",
+        "link": "https://drive.google.com/file/d/12TeYRD8fd0uqm3CeOatCXmfKb4wZ4YTP/view",
         "highlights": [
           {
             "label": "Guide",
@@ -670,7 +670,7 @@ const DATA = {
       "detail": {
         "desc": "Conceived and pitched a D2C subscription brand for premium dog nutrition — monthly boxes of protein-rich, preservative-free treats (dehydrated chicken instead of preservatives). Told through a customer story ('Timi' and her dog 'Buddy'), with problem research, value against alternatives, marketing and traction plan, market analysis, financial projections, investment ask and an online store concept. Entrepreneurship course project, IIM Udaipur (guide: Prof. Rajesh Pandit).",
         "outcome": "Investor-ready pitch deck + brand strategy",
-        "link": "https://drive.google.com/file/d/1pAikK0kliuVHlVBPtv4H0suOy8PZsNC_/view",
+        "link": "https://drive.google.com/file/d/1JFgKt0GMsYSR_uQwtMtWOyS5z1H7VzTf/view",
         "highlights": [
           {
             "label": "Guide",
@@ -708,7 +708,7 @@ const DATA = {
       "detail": {
         "desc": "Design Thinking course project, IIM Udaipur. Reframed the brief to 'a branding-based product and promotion strategy for Colgate Fresh for customers who value freshness'. Ran 8 user interviews with empathy maps, clustered insights into 9 themes and 3 key insights (value-conscious buyers want discount bundles; they want a complementary freshness range from a trusted brand; family habits make people stick to brands). Built the persona 'Ashok' and a POV/HMW, then ideated and prioritised a bundled oral-care kit: Colgate Max Fresh, a hybrid toothbrush with tongue cleaner, a germ-cleaning 'phantom candy', a flavoured freshness inhaler and a teeth wiper, promoted through family-themed TV ads.",
         "outcome": "Rebranding strategy + bundled product concept",
-        "link": "https://docs.google.com/document/d/1crXnUVC25kP4JCNsrlAAz0R6UUVWcLys/edit",
+        "link": "https://drive.google.com/file/d/1JELtYNcKQYCNb0X5hRYPb9tyHdhGDLuO/view",
         "highlights": [
           {
             "label": "Guide",
@@ -742,7 +742,7 @@ const DATA = {
       "detail": {
         "desc": "Deep-dive structural analysis of the Indian 4-wheeler automotive sector with Mahindra & Mahindra as the focal firm. Applied Porter's Five Forces, financial performance analysis, and competitive positioning against Tata Motors and Maruti Suzuki to derive strategic recommendations. Strategic Management course project, IIM Udaipur (guide: Prof. Shaleen Gopal).",
         "outcome": "Industry analysis + strategic recommendations report",
-        "link": "https://drive.google.com/file/d/1AMoDZx6B5DCLvNQyYrgndfshLlygex8m/view",
+        "link": "https://drive.google.com/file/d/1u6JBLkzAW7GnMhk3GPMhag1zGTAZUIDh/view",
         "highlights": [
           {
             "label": "Guide",
@@ -824,7 +824,7 @@ const DATA = {
       "detail": {
         "desc": "Led a 25-member team as Vice-Captain and Technical Head at SAE SUPRA India 2015. Responsibilities spanned Chassis Design, CAE Analysis, Steering Geometry, Ergonomics, and overall design leadership — from concept through simulation, manufacturing, and validation. Modelled in CATIA V5 and SolidWorks; analysed in HyperMesh and SolidWorks Simulation. Design work covered the roll cage, steering system and impact attenuator. Wrote a chassis design report: a space-frame chassis built up from the suspension hard points in AISI 1018 steel, with front, side and rear impact analysis at 60 km/h using Euro NCAP inputs, torsional and bending analysis, and CFD on the bodywork for drag. Sponsored by JBM Group and Tata Motors. Research published in Imperial Journal of Interdisciplinary Research.",
         "outcome": "Competition vehicle built + Research paper published",
-        "link": "https://drive.google.com/open?id=0B5u_OTPvyacbOEMySVljWm5hd1k",
+        "link": "https://drive.google.com/file/d/0B5u_OTPvyacbeXlpRlNVNVBGVFk/view?resourcekey=0-9dUGRJx_NXt6l9q6n8CetQ",
         "highlights": [
           {
             "label": "Role",
@@ -911,7 +911,7 @@ const DATA = {
       "detail": {
         "desc": "B.Tech final-year project at GBPUAT Pantnagar, in a team of 7 (advisor: Dr. Lokesh Varshney). Designed and fabricated a mechanism that draws power from the chain drive: a modified sprocket turns an axle and pushing lever, which pushes a lifting lever pivoted on the side stand and retracts it once the vehicle moves. Sized parts (high-carbon steel sprocket, AISI 1018 axle and levers) and ran static and fatigue FEA in SolidWorks Simulation for a 60 Nm peak torque (e.g. sprocket: 33 MPa max stress vs 450 MPa yield, minimum load factor 6.4). Built a working prototype on a bicycle for about ₹2,180; the design adapts to any chain-driven two-wheeler.",
         "outcome": "Working prototype + FEA-validated design, ~₹2,180 build cost",
-        "link": "https://drive.google.com/open?id=0B5u_OTPvyacbQVgxRTVGV2Z3a0k",
+        "link": "https://drive.google.com/file/d/0B5u_OTPvyacbbVpGY1I5cmNVaTA/view?resourcekey=0-VWbNLuyAKvTqO02lt-RrTw",
         "highlights": [
           {
             "label": "Team",
@@ -1022,7 +1022,7 @@ const DATA = {
       "detail": {
         "desc": "IIT Kanpur course project (guide: Dr. P. Venkitanarayanan). Modelled a plate with an elliptical hole in Abaqus and computed stress intensity factors using several numerical methods, then compared them with analytic solutions.",
         "outcome": "Course project report",
-        "link": "https://drive.google.com/open?id=0B5u_OTPvyacbdXNiTTFOV0Q3LXc"
+        "link": "https://drive.google.com/file/d/0B5u_OTPvyacbdXNiTTFOV0Q3LXc/view?resourcekey=0-8nwBhlEcCaLLsylg16caHQ"
       }
     },
     {
