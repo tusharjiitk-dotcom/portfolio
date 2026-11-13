@@ -1012,6 +1012,7 @@ const DATA = {
       "category": "engineering",
       "result": "",
       "featured": false,
+      "image": "assets/images/projects/fracture.png",
       "tags": [
         "Abaqus",
         "Fracture Mechanics",
@@ -1031,6 +1032,7 @@ const DATA = {
       "category": "engineering",
       "result": "",
       "featured": false,
+      "image": "assets/images/projects/composites.png",
       "tags": [
         "Composites",
         "Tensile Testing",
@@ -1050,6 +1052,7 @@ const DATA = {
       "category": "engineering",
       "result": "",
       "featured": false,
+      "image": "assets/images/projects/gradient-elasticity.png",
       "tags": [
         "Continuum Mechanics",
         "Gradient Elasticity",
@@ -1319,9 +1322,10 @@ const DATA = {
     {
       "id": "involuntary-car-safety",
       "title": "Enhancing Car Safety Using Involuntary Actions",
-      "category": "engineering",
+      "category": "self",
       "result": "",
       "featured": false,
+      "image": "assets/images/projects/involuntary-car-safety.png",
       "tags": [
         "Automotive Safety",
         "Sensors",
