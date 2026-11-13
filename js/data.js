@@ -1072,6 +1072,7 @@ const DATA = {
       "category": "mba",
       "result": "",
       "featured": false,
+      "image": "assets/images/projects/swaraj-dt.png",
       "tags": [
         "Digital Transformation",
         "Strategy",
@@ -1092,6 +1093,7 @@ const DATA = {
       "category": "mba",
       "result": "",
       "featured": false,
+      "image": "assets/images/projects/swaraj-iot.png",
       "tags": [
         "IoT",
         "AgriTech",
@@ -1113,6 +1115,7 @@ const DATA = {
       "category": "mba",
       "result": "",
       "featured": false,
+      "image": "assets/images/projects/shopping-trends.png",
       "tags": [
         "R",
         "Python",
@@ -1134,6 +1137,7 @@ const DATA = {
       "category": "mba",
       "result": "",
       "featured": false,
+      "image": "assets/images/projects/cnn-retinopathy.png",
       "tags": [
         "Deep Learning",
         "CNN",
@@ -1149,31 +1153,12 @@ const DATA = {
       }
     },
     {
-      "id": "huawei-cloud",
-      "title": "Cloud Solution for Clinical-Trial Inventory (Huawei Cloud)",
-      "category": "mba",
-      "result": "",
-      "featured": false,
-      "tags": [
-        "Cloud Architecture",
-        "Huawei Cloud",
-        "AI/ML",
-        "Healthcare",
-        "ERP"
-      ],
-      "summary": "Huawei Cloud architecture to automate inventory forecasting and reordering for a pharma company's clinical trials.",
-      "detail": {
-        "desc": "Cloud Technology & Security group report, IIM Udaipur (Prof. Raja Ramkaran Reddy Rudravaram). For a pharma company whose legacy ERP and manual reordering caused chemical shortages during clinical trials, proposed a Huawei Cloud solution: EIHealth for AI inventory monitoring, ModelArts for demand forecasting with automatic reorder triggers, and Data Lake Insight to unify ERP and app data. Estimated $50k–100k for a pilot and $250k–500k for full deployment.",
-        "outcome": "Solution architecture + cost estimate report",
-        "link": "https://drive.google.com/file/d/13iWdAj4BHJTEv_YsLkeuHgZithlysbd9/view"
-      }
-    },
-    {
       "id": "blockchain-ipr",
       "title": "Blockchain-based IP Rights Management",
       "category": "mba",
       "result": "",
       "featured": false,
+      "image": "assets/images/projects/blockchain-ipr.png",
       "tags": [
         "Blockchain",
         "Smart Contracts",
@@ -1192,6 +1177,7 @@ const DATA = {
       "category": "mba",
       "result": "",
       "featured": false,
+      "image": "assets/images/projects/bewakoof-dm.png",
       "tags": [
         "Digital Marketing",
         "Content Strategy",
@@ -1212,6 +1198,7 @@ const DATA = {
       "category": "mba",
       "result": "",
       "featured": false,
+      "image": "assets/images/projects/nothing-phone.png",
       "tags": [
         "Marketing Strategy",
         "STP",
@@ -1232,6 +1219,7 @@ const DATA = {
       "category": "mba",
       "result": "",
       "featured": false,
+      "image": "assets/images/projects/inr-internationalisation.png",
       "tags": [
         "Policy Analysis",
         "Financial Markets",
@@ -1252,6 +1240,7 @@ const DATA = {
       "category": "mba",
       "result": "",
       "featured": false,
+      "image": "assets/images/projects/ob-structural-audit.png",
       "tags": [
         "Organisational Behaviour",
         "Structural Audit",
@@ -1265,29 +1254,12 @@ const DATA = {
       }
     },
     {
-      "id": "google-genai-strategy",
-      "title": "Google's Strategic Options in the GenAI Era",
-      "category": "mba",
-      "result": "",
-      "featured": false,
-      "tags": [
-        "Competitive Strategy",
-        "Generative AI",
-        "Big Tech"
-      ],
-      "summary": "Competitive strategy analysis of Google's response to ChatGPT, recommending a phased hybrid approach.",
-      "detail": {
-        "desc": "Advanced Competitive Strategy group assignment, IIM Udaipur (Feb 2025). Weighed Google's options after ChatGPT: a standalone chatbot, GenAI in Search, AI in Workspace, developer APIs, and open vs closed models. Recommended a phased hybrid strategy: a controlled chatbot launch, then gradual integration into core products, then expansion of the developer and cloud ecosystem.",
-        "outcome": "Strategy recommendation report",
-        "link": "https://drive.google.com/file/d/1xqNkrAByPRTgz8Xctck0MK2QuFobZVna/view"
-      }
-    },
-    {
       "id": "confianza",
       "title": "Data Strategy & Governance Turnaround - Confianza (Case)",
       "category": "mba",
       "result": "Individual",
       "featured": false,
+      "image": "assets/images/projects/confianza.png",
       "tags": [
         "Data Strategy",
         "Data Governance",
@@ -1299,24 +1271,6 @@ const DATA = {
         "desc": "Individual BDDO case study, IIM Udaipur. Writing as a consultant to Confianza, a firm in 50+ countries with 100+ unintegrated applications and high SG&A, diagnosed its poor data strategy (4–5 week quarterly close, manual reconciliation). Proposed rationalising applications by stability and usage, a single source of truth, master data management and a four-phase roadmap (discovery, planning, execution, institutionalisation) with a risk–reward matrix.",
         "outcome": "One-page consulting case report",
         "link": "https://drive.google.com/file/d/1Ej2wyZQ1zAMySSADl0DHr4D9w-txm_QX/view"
-      }
-    },
-    {
-      "id": "sands-site-selection",
-      "title": "Plant Site Selection Report - Sands Corporation (Case)",
-      "category": "mba",
-      "result": "Individual",
-      "featured": false,
-      "tags": [
-        "Business Writing",
-        "Decision Analysis",
-        "Operations"
-      ],
-      "summary": "Individual management report recommending a new plant site using a weighted scoring model.",
-      "detail": {
-        "desc": "Individual Written Management Communication (WMC) report, IIM Udaipur (June 2024). Writing as VP Manufacturing, compared two plant sites for a military aircraft contract (Kimberley Street vs Hampton) on labour availability, operating cost, smooth functioning and long-term prospects with a weighted scoring model, and recommended Hampton with construction starting within two weeks.",
-        "outcome": "Management report",
-        "link": "https://drive.google.com/file/d/1JEorTChs6iz4bOuLiyRCorWZTjhBKluc/view"
       }
     },
     {
