@@ -317,379 +317,1024 @@ const DATA = {
      categories: mba | engineering | self | competition
   ───────────────────────────────────────── */
   projects: [
-    // ── PROFESSIONAL WORK ───────────────────
     {
-      id:       'oncall-ai',
-      title:    'On-Call AI - Farmer Service Booking Platform',
-      category: 'work',
-      result:   '🚀 Live · 14L+ Farmers',
-      featured: true,
-      image:    'assets/images/projects/oncall-ai.png',
-      tags:     ['AI/ML', 'GovTech', 'PRD', 'Figma', 'Sprint Planning', 'Odisha'],
-      summary:  'Led On-Call AI from product requirements to Go-Live - a service booking platform connecting 14+ lakh farmers to agri services across 30 districts.',
-      detail: {
-        desc:    'Owned the product roadmap for an AI-powered On-Call service booking platform for farmers in Odisha. Authored PRDs, built Figma wireframes, drove sprint planning and vendor management through pilot to full rollout. The system uses text-to-speech and voice response - 11 modules automating the farmer service booking pipeline.',
-        outcome: '14+ lakh farmers reached across 30 districts, Odisha',
-        highlights: [
-          { label: 'Organisation', val: 'Samagra Governance Consulting' },
-          { label: 'Scale',        val: '14+ lakh farmers · 30 districts' },
-          { label: 'Modules',      val: '11-module AI pipeline (TTS + voice)' },
-          { label: 'Tools',        val: 'PRD, Figma, Agile / Sprint Planning' },
-        ],
-        achievements: [
-          'Built 11-module AI automation of farmer advisory with text-to-speech and voice response',
-          'Activated 7+ Agri-AI use cases - crop advisory, weather & insurance',
-          'Optimised helpline via 1,880-farmer survey and 4 A/B experiments',
-        ],
-      },
+      "id": "oncall-ai",
+      "title": "On-Call AI - Doorstep Artificial Insemination Booking Platform",
+      "category": "work",
+      "result": "🚀 Live · 10 Districts · 3.7L+ Bookings",
+      "featured": true,
+      "image": "assets/images/projects/oncall-ai.png",
+      "tags": [
+        "GovTech",
+        "Product Management",
+        "PRD",
+        "Figma",
+        "Sprint Planning",
+        "Livestock",
+        "Odisha"
+      ],
+      "summary": "Led product for On-Call AI (Artificial Insemination) - Odisha's centralised platform for booking doorstep AI services through the 155333 helpline, with OTP-verified delivery. 3.7 lakh+ bookings across 10 districts.",
+      "detail": {
+        "desc": "On-Call AI (Artificial Insemination) is a centralised service booking platform for livestock farmers in Odisha, run by the F&ARD Department under the LEAP programme. A farmer calls the 155333 helpline, the request becomes a ticket auto-assigned to the Gram Panchayat's AI technician, and the service is closed with the farmer's OTP. Piloted in Puri (July 2023) and scaled to 10 districts (January 2024). Owned the product roadmap: authored PRDs and the feature-wise scope for the web portal, AIT mobile app and helpline toolkit, built Figma wireframes, and drove sprint planning and vendor management. Technician incentives are paid quarterly against verified deliveries (5 rounds so far, ~₹27 lakh in round 5).",
+        "outcome": "3.71 lakh bookings, 2,400+ technicians mapped, pregnancy-positive rate up from 28% to ~48% (as of Oct 2025)",
+        "link": "https://olrds.odisha.gov.in/en/on-call-ai/",
+        "highlights": [
+          {
+            "label": "Organisation",
+            "val": "Samagra Governance (for F&ARD Dept, Odisha)"
+          },
+          {
+            "label": "Scale",
+            "val": "3.71 lakh bookings · 10 districts · 2,400+ technicians"
+          },
+          {
+            "label": "Channel",
+            "val": "155333 helpline · OTP-verified closure"
+          },
+          {
+            "label": "Tools",
+            "val": "PRD, Figma, Agile / Sprint Planning"
+          }
+        ]
+      }
     },
     {
-      id:       'n8n-agents',
-      title:    'n8n AI Agent Workflows - Resume & Research',
-      category: 'work',
-      result:   '⚙️ Deployed',
-      featured: false,
-      image:    'assets/images/projects/n8n-agents.png',
-      tags:     ['n8n', 'AI Agents', 'OpenAI', 'Automation', 'SerpApi'],
-      summary:  'Built n8n-based agent workflows: Resume Optimisation Agent and Research Agent using OpenAI + SerpApi.',
-      detail: {
-        desc:    'Independently built two end-to-end AI agent workflows using n8n. (1) Resume Optimisation Agent: ingests PDF resume + JD and outputs ATS-aligned edits via OpenAI. (2) Research Agent: takes a query → SerpApi web search → synthesises a 2-page brief → auto-emails via Gmail.',
-        outcome: 'Deployed and actively used for job applications and research',
-        highlights: [
-          { label: 'Stack',  val: 'n8n · OpenAI · SerpApi · Gmail API' },
-          { label: 'Agent 1', val: 'Resume Optimisation - PDF + JD → ATS edits' },
-          { label: 'Agent 2', val: 'Research Agent → 2-page brief → Auto email' },
-        ],
-      },
-    },
-
-    {
-      id:       'datacat',
-      title:    'DataCat - Digital Product Strategy',
-      category: 'mba',
-      result:   '🏢 Industry Project',
-      featured: false,
-      image:    'assets/images/projects/datacat.png',
-      tags:     ['Product Strategy', 'SME Analytics', 'API Roadmap', 'GTM', 'User Research'],
-      summary:  'Industry project with Codewave - positioned DataCat as a competitive SME analytics tool; defined API roadmap and GTM strategy.',
-      detail: {
-        desc:    'Benchmarked competing platforms and conducted user interviews to position DataCat as a competitive SME analytics tool. Defined an API roadmap integrating Google and Meta data sources, and collaborated directly with the firm on go-to-market strategy and pricing.',
-        outcome: 'Product positioning, API roadmap (Google/Meta), GTM & pricing strategy delivered to firm',
-        highlights: [
-          { label: 'Guide',      val: 'Industry Project - Codewave, IIM Udaipur' },
-          { label: 'Client',     val: 'DataCat (SME Analytics Platform)' },
-          { label: 'Deliverable',val: 'Platform benchmarking, API roadmap, GTM strategy' },
-        ],
-      },
+      "id": "n8n-agents",
+      "title": "n8n AI Agent Workflows - Resume & Research",
+      "category": "work",
+      "result": "⚙️ Built & Demoed",
+      "featured": false,
+      "image": "assets/images/projects/n8n-agents.png",
+      "tags": [
+        "n8n",
+        "AI Agents",
+        "OpenAI",
+        "SerpApi",
+        "Automation",
+        "No-code/Low-code"
+      ],
+      "summary": "Built two n8n agent workflows: a Resume Optimisation Agent and a Research Agent that searches, synthesises and emails a 2-page brief.",
+      "detail": {
+        "desc": "Independently built two end-to-end AI agent workflows in n8n. (1) Resume Optimisation Agent: takes a resume PDF and a job description, analyses both, and suggests crisp, relevant edits without filler. (2) Research Agent: a chat trigger receives the query, then a chain of API calls runs web search (SerpApi), content extraction and OpenAI for query refinement and synthesis; the output is a 2-page report with key findings, summary and source links, mailed automatically via Gmail. Shared the deck and a demo video on LinkedIn.",
+        "outcome": "Two working agents, demoed publicly (LinkedIn post: 1.8k impressions, 31 reactions)",
+        "link": "https://www.linkedin.com/posts/tushar-profile_ai-agents-automation-ugcPost-7393058418145558530-5cxR/",
+        "highlights": [
+          {
+            "label": "Stack",
+            "val": "n8n · OpenAI · SerpApi · Gmail"
+          },
+          {
+            "label": "Agent 1",
+            "val": "Resume Optimisation - PDF + JD → targeted edits"
+          },
+          {
+            "label": "Agent 2",
+            "val": "Research Agent → 2-page brief → auto email"
+          }
+        ]
+      }
     },
     {
-      id:       'maruti',
-      title:    'Maruti Suzuki - Strategic Decision Framework',
-      category: 'mba',
-      result:   '',
-      featured: false,
-      image:    'assets/images/projects/maruti.png',
-      tags:     ['Strategy', 'Decision Framework', 'CNG Expansion', 'Dashboard', 'BDDO'],
-      summary:  'Built a data-driven decision framework for Maruti\'s CNG expansion with a real-time governance dashboard model.',
-      detail: {
-        desc:    'Applied Big Data-Driven Organisational (BDDO) frameworks to build a structured decision model for Maruti Suzuki\'s CNG vehicle expansion. Proposed a real-time governance dashboard for cross-functional performance tracking across business units.',
-        outcome: 'Strategic decision framework + governance dashboard design',
-        highlights: [
-          { label: 'Guide',      val: 'BDDO Course, IIM Udaipur' },
-          { label: 'Company',    val: 'Maruti Suzuki India Ltd' },
-          { label: 'Focus',      val: 'CNG expansion strategy & cross-functional governance' },
-        ],
-      },
+      "id": "datacat",
+      "title": "DataCat (Codewave) - Product Strategy for an SME Ad-Analytics Tool",
+      "category": "mba",
+      "result": "🏢 Industry Project · Codewave",
+      "featured": false,
+      "image": "assets/images/projects/datacat.png",
+      "tags": [
+        "Product Strategy",
+        "Competitive Analysis",
+        "User Research",
+        "API Integration",
+        "Pricing",
+        "GTM"
+      ],
+      "summary": "Industry project with Codewave: competitor benchmarking, a Meta Ads API integration plan, user interviews and a tiered pricing model for DataCat, an SME ad-analytics MVP.",
+      "detail": {
+        "desc": "IIM Udaipur DEM industry project with Codewave, in a team of 3 (industry mentor: Karthik Ramesh; faculty mentor: Dr. Avadhoot Jathar). DataCat was an MVP connected only to Google Ads. Benchmarked it against Funnel.io, Supermetrics, Adzooma, HubSpot, Optmyzr and BCG Marketing Catalyst: compliance monitoring was its differentiator, single-platform integration its main gap. Mapped Google Ads vs Meta Ads API metrics and wrote an integration plan (request batching, caching, retries, incremental sync, rate limits). Interviewed a brand strategy manager, IIMU's digital marketing manager and faculty, a B2B head of digital marketing and a VP at PureTech Digital. Recommended a simpler insight dashboard, automated reporting, multi-touch attribution, CRM integration and a tiered pricing model (15-day free trial, self-service Basic, agent-assisted Premium).",
+        "outcome": "Final report + presentation to Codewave: competitor benchmark, Meta Ads integration plan, pricing model",
+        "link": "https://drive.google.com/file/d/1hDNItUndjsQESLupwowUguPAW_EaR6pn/view",
+        "highlights": [
+          {
+            "label": "Guide",
+            "val": "Industry Project - Codewave, IIM Udaipur"
+          },
+          {
+            "label": "Client",
+            "val": "DataCat (SME Analytics Platform)"
+          },
+          {
+            "label": "Deliverable",
+            "val": "Platform benchmarking, API roadmap, GTM strategy"
+          }
+        ]
+      }
     },
     {
-      id:       'churn',
-      title:    'Bank Customer Churn Analysis & Retention',
-      category: 'mba',
-      result:   '',
-      featured: false,
-      image:    'assets/images/projects/churn.png',
-      tags:     ['Advanced Analytics', 'ML', 'Logistic Regression', 'Decision Trees', 'KNN'],
-      summary:  'Built predictive ML models to identify churn risk and designed segmented retention strategies.',
-      detail: {
-        desc:    'Developed and evaluated multiple predictive models - logistic regression, decision trees, and KNN - to identify bank customers at risk of churning. Designed segmented retention strategies and personalised campaign targeting frameworks based on model outputs.',
-        outcome: 'ML-powered churn prediction model + segmented retention strategy',
-        highlights: [
-          { label: 'Guide',   val: 'Advanced Analytics, IIM Udaipur' },
-          { label: 'Models',  val: 'Logistic Regression · Decision Trees · KNN' },
-          { label: 'Output',  val: 'Churn risk scoring + personalised retention campaigns' },
-        ],
-      },
-    },
-
-    // ── COMPETITION ─────────────────────────
-    {
-      id:       'quicify',
-      title:    'Quicify - Q-Commerce Product Strategy',
-      category: 'competition',
-      result:   '🏆 1st Place',
-      featured: true,
-      image:    'assets/images/projects/quicify.png',
-      tags:     ['Product Strategy', 'Q-Commerce', 'GTM', 'Financial Model'],
-      summary:  'Won 1st place at ProdXcelerate\'24 (BITS Goa). Full product strategy for a quick-commerce platform.',
-      detail: {
-        link:    'https://drive.google.com/file/d/1LqnL8wQ2IZOZlM1MYHfu5Lh1xPMbBoiS/view',
-        desc:    'Developed an end-to-end product strategy for a quick-commerce platform — covering pain point identification, market sizing, competitive landscape, product roadmap, go-to-market plan, and 3-year financial projections. Presented and won against competing MBA teams at ProdXcelerate\'24, BITS Goa.',
-        outcome: '🏆 1st Place — ProdXcelerate\'24, BITS Goa',
-        highlights: [
-          { label: 'Competition', val: 'ProdXcelerate\'24 — BITS Goa' },
-          { label: 'Result',      val: '1st Place' },
-          { label: 'Deliverable', val: 'Full product strategy + GTM + financial model' },
-        ],
-      },
+      "id": "maruti",
+      "title": "Maruti Suzuki - CNG Expansion Decision Framework",
+      "category": "mba",
+      "result": "",
+      "featured": false,
+      "image": "assets/images/projects/maruti.png",
+      "tags": [
+        "Decision Modelling",
+        "DMN",
+        "Data Strategy",
+        "AI Strategy",
+        "Pareto Analysis"
+      ],
+      "summary": "Decision framework for Maruti Suzuki's CNG expansion: Pareto-ranked strategic decisions, a DMN decision model, data-gap analysis and AI/automation feasibility.",
+      "detail": {
+        "desc": "Building Data-Driven Organisations (BDDO) group project, IIM Udaipur. Reviewed Maruti's 5-year financials and peer ratios against Hyundai, Tata Motors and M&M. Ranked five strategic decisions (diesel phase-out, CNG expansion, NEXA, localisation, EV plan) by monetary impact using Pareto analysis, and picked CNG expansion. Mapped the data behind that decision, built a DMN decision model, classified each data need as available, partial or missing with ways to close the gaps, and proposed AI use cases (CNG demand forecasting, refuelling-infrastructure mapping, competitor and customer insight). Concluded the decision can only be partly automated. My part: identifying the key decisions and the data behind them.",
+        "outcome": "DMN decision model + data-gap and AI strategy report",
+        "link": "https://drive.google.com/file/d/1HfPhoGLW7IWSmR3vI9ASGRtNDS-ba1gc/view",
+        "highlights": [
+          {
+            "label": "Course",
+            "val": "Building Data-Driven Organisations, IIM Udaipur"
+          },
+          {
+            "label": "Methods",
+            "val": "Pareto analysis · DMN decision model · data-gap analysis"
+          },
+          {
+            "label": "My part",
+            "val": "Key decisions and the data behind them"
+          }
+        ]
+      }
     },
     {
-      id:       'rapido',
-      title:    'Rapido - Urban Transport for Female Users',
-      category: 'competition',
-      result:   'Participation',
-      featured: false,
-      image:    'assets/images/projects/rapido.png',
-      tags:     ['Urban Mobility', 'Design Thinking', 'User Research', 'Safety'],
-      summary:  'Design Thinking-based product strategy to improve Rapido\'s safety and adoption among female urban users.',
-      detail: {
-        link:    'https://drive.google.com/file/d/1WYV7U4XXanRa5Z56-zfhs5nVaJsgILDO/view',
-        desc:    'Applied Design Thinking to redesign Rapido\'s experience for female users — empathy-led research including quantitative surveys, contextual interviews, and feasibility-impact balancing to identify safety gaps. Proposed a user-centric product feature set addressing safety, trust, and discoverability on the platform.',
-        outcome: 'Case Competition Participation',
-        highlights: [
-          { label: 'Type',     val: 'Case Competition' },
-          { label: 'Method',   val: 'Design Thinking — Empathy → Ideate → Prototype' },
-          { label: 'Research', val: 'Quantitative surveys + contextual interviews' },
-          { label: 'Focus',    val: 'Urban Mobility, Women Safety, Ride-hailing' },
-        ],
-      },
-    },
-
-    // ── MBA ─────────────────────────────────
-    {
-      id:       'piced',
-      title:    'PicED - Gen-AI Product Strategy',
-      category: 'mba',
-      result:   '',
-      featured: false,
-      image:    'assets/images/projects/piced.png',
-      tags:     ['Gen-AI', 'B2B', 'Agile', 'DevOps', 'Product Roadmap', 'GTM'],
-      summary:  'End-to-end PM for a Gen-AI B2B EdTech platform — BMC, user personas, MOSCOW, roadmap, GTM, Agile implementation.',
-      detail: {
-        link:    'https://drive.google.com/file/d/1HngpOSLjC04FM8EkURMZw913lI6PaBqi/view',
-        desc:    'Two-course project for PicED — a Gen-AI B2B platform that transforms complex teaching concepts into visual aids for educators. Covered full PM lifecycle: Business Model Canvas, user personas, MOSCOW prioritisation, prototyping, product roadmap, and GTM strategy. Second course applied Agile & DevOps — Kanban board, story points, sprint planning, retrospectives, and CI/CD concepts for a vocabulary learning feature.',
-        outcome: 'Full PM lifecycle deliverable — Strategy + Agile implementation',
-        highlights: [
-          { label: 'Guide',    val: 'Malthi Satish, IIM Udaipur' },
-          { label: 'Courses',  val: 'Product Management + Agile & DevOps' },
-          { label: 'Methods',  val: 'BMC · MOSCOW · Kanban · Sprints · GTM' },
-          { label: 'Market',   val: 'B2B Enterprise EdTech' },
-        ],
-      },
+      "id": "churn",
+      "title": "Bank Customer Churn Prediction & Retention",
+      "category": "mba",
+      "result": "",
+      "featured": false,
+      "image": "assets/images/projects/churn.png",
+      "tags": [
+        "Advanced Analytics",
+        "JMP",
+        "Logistic Regression",
+        "Random Forest",
+        "KNN",
+        "Decision Trees"
+      ],
+      "summary": "Predicted bank customer churn with 5 ML models in JMP; picked random forest (AUC 0.89) and turned the key drivers into retention strategies.",
+      "detail": {
+        "desc": "Advanced Analytics I group project, IIM Udaipur. Prepared a bank churn dataset in JMP (encoding, binning age and credit score, oversampling exited customers). Built a forward-selection logistic regression (84% accuracy, AUC 0.83), then compared logistic regression, discriminant analysis, KNN, decision tree and random forest. Picked random forest (250 trees): 81% accuracy, 75% precision, AUC 0.89, with the cut-off lowered to 0.3 to catch more churners. Age, number of products and balance were the strongest churn drivers. Turned these into retention strategies: cross-selling to single-product customers, age-based engagement, re-activating inactive users and targeted offers for high-risk customers.",
+        "outcome": "Random forest churn model (AUC 0.89) + segmented retention strategy",
+        "link": "https://drive.google.com/file/d/1dyxXu7VQZayntAFEfRABk2ABwz2DHKX-/view",
+        "highlights": [
+          {
+            "label": "Course",
+            "val": "Advanced Analytics I, IIM Udaipur"
+          },
+          {
+            "label": "Tool",
+            "val": "JMP"
+          },
+          {
+            "label": "Best model",
+            "val": "Random forest · AUC 0.89 · 81% accuracy"
+          }
+        ]
+      }
     },
     {
-      id:       'finzo',
-      title:    'FinZo - AI Investment Platform',
-      category: 'mba',
-      result:   '',
-      featured: false,
-      image:    'assets/images/projects/finzo.png',
-      tags:     ['FinTech', 'AI/ML', 'GTM', 'Business Model', 'Portfolio Optimisation'],
-      summary:  'AI-powered retail investment platform simplifying stock selection and portfolio optimisation for time-strapped investors.',
-      detail: {
-        link:    'https://drive.google.com/file/d/1oJVFTQ9RqKuX4HlKGsCr5sjcH6H9L2vw/view',
-        desc:    'Conceptualised FinZo — an AI-driven investment assistant for retail investors addressing the pain of being time-strapped. Platform provides smart insights for stock selection, personalised portfolio optimisation, risk profiling, and behavioural finance nudges. Full business plan, market sizing, competitive benchmarking, and financial projections.',
-        outcome: 'Full business plan + GTM deliverable',
-        highlights: [
-          { label: 'Guide',       val: 'Sriram Natarajan, IIM Udaipur' },
-          { label: 'Domain',      val: 'FinTech / Retail Investment' },
-          { label: 'Problem',     val: 'Time-strapped investors need smart, simplified investing' },
-          { label: 'Deliverable', val: 'Business plan + market sizing + GTM + financial projections' },
-        ],
-      },
+      "id": "quicify",
+      "title": "Quicify - Q-Commerce Product Strategy",
+      "category": "competition",
+      "result": "🏆 1st Place",
+      "featured": true,
+      "image": "assets/images/projects/quicify.png",
+      "tags": [
+        "Product Strategy",
+        "Q-Commerce",
+        "GTM",
+        "Financial Model"
+      ],
+      "summary": "Won 1st place at ProdXcelerate'24 (BITS Goa). Full product strategy for a quick-commerce platform.",
+      "detail": {
+        "desc": "Developed an end-to-end product strategy for a quick-commerce platform — covering pain point identification, market sizing, competitive landscape, product roadmap, go-to-market plan, and 3-year financial projections. Presented and won against competing MBA teams at ProdXcelerate'24, organised by the Consulting Club and CEL, BITS Goa.",
+        "outcome": "🏆 1st Place — ProdXcelerate'24, BITS Goa",
+        "link": "https://drive.google.com/file/d/1LqnL8wQ2IZOZlM1MYHfu5Lh1xPMbBoiS/view",
+        "highlights": [
+          {
+            "label": "Competition",
+            "val": "ProdXcelerate'24 — BITS Goa"
+          },
+          {
+            "label": "Result",
+            "val": "1st Place"
+          },
+          {
+            "label": "Deliverable",
+            "val": "Full product strategy + GTM + financial model"
+          }
+        ]
+      }
     },
     {
-      id:       'purepaws',
-      title:    'PurePaws - D2C Startup Pitch',
-      category: 'mba',
-      result:   '',
-      featured: false,
-      image:    'assets/images/projects/purepaws.png',
-      tags:     ['D2C', 'Startup', 'Subscription', 'Pitch Deck', 'Pet Care'],
-      summary:  'Monthly protein-rich, preservative-free dog treats subscription brand — full investor pitch with market research and brand narrative.',
-      detail: {
-        link:    'https://drive.google.com/file/d/1pAikK0kliuVHlVBPtv4H0suOy8PZsNC_/view',
-        desc:    'Conceived and pitched a D2C subscription brand for premium dog nutrition — monthly curated boxes of protein-rich, preservative-free treats. Built comprehensive market research, brand narrative development, positioning strategy, and 3-year financial projections for an investor pitch.',
-        outcome: 'Investor-ready pitch deck + brand strategy',
-        highlights: [
-          { label: 'Guide',       val: 'Rajesh Pandit, IIM Udaipur' },
-          { label: 'Model',       val: 'D2C Monthly Subscription — Pet Nutrition' },
-          { label: 'Product',     val: 'Protein-rich, preservative-free dog treats' },
-          { label: 'Deliverable', val: 'Market research + brand narrative + financial model' },
-        ],
-      },
+      "id": "rapido",
+      "title": "Rapido - Urban Transport for Female Users",
+      "category": "competition",
+      "result": "Participation",
+      "featured": false,
+      "image": "assets/images/projects/rapido.png",
+      "tags": [
+        "Urban Mobility",
+        "Design Thinking",
+        "User Research",
+        "Safety"
+      ],
+      "summary": "Design Thinking-based product strategy to improve Rapido's safety and adoption among female urban users.",
+      "detail": {
+        "desc": "Applied Design Thinking to redesign Rapido's experience for female users — empathy-led research including quantitative surveys, contextual interviews, and feasibility-impact balancing to identify safety gaps. Proposed a user-centric product feature set addressing safety, trust, and discoverability on the platform.",
+        "outcome": "Case Competition Participation",
+        "link": "https://drive.google.com/file/d/1WYV7U4XXanRa5Z56-zfhs5nVaJsgILDO/view",
+        "highlights": [
+          {
+            "label": "Type",
+            "val": "Case Competition"
+          },
+          {
+            "label": "Method",
+            "val": "Design Thinking — Empathy → Ideate → Prototype"
+          },
+          {
+            "label": "Research",
+            "val": "Quantitative surveys + contextual interviews"
+          },
+          {
+            "label": "Focus",
+            "val": "Urban Mobility, Women Safety, Ride-hailing"
+          }
+        ]
+      }
     },
     {
-      id:       'colgate',
-      title:    'Colgate Rebranding - Design Thinking',
-      category: 'mba',
-      result:   '',
-      featured: false,
-      image:    'assets/images/projects/colgate.png',
-      tags:     ['Design Thinking', 'Rebranding', 'User Research', 'Brand Strategy'],
-      summary:  'Redesigned Colgate\'s brand and product ecosystem using Design Thinking — bundled oral hygiene solution addressing freshness and value needs.',
-      detail: {
-        link:    'https://docs.google.com/document/d/1crXnUVC25kP4JCNsrlAAz0R6UUVWcLys/edit',
-        desc:    'Applied the Stanford Design Thinking process to reimagine Colgate\'s brand strategy. Empathy research revealed unmet freshness and value needs; ideation led to a bundled oral hygiene ecosystem combining toothpaste, a hybrid toothbrush, breath inhaler, and candy — redefining the category beyond just toothpaste.',
-        outcome: 'Rebranding strategy + bundled product concept',
-        highlights: [
-          { label: 'Guide',       val: 'IIM Udaipur' },
-          { label: 'Framework',   val: 'Stanford Design Thinking — Empathise → Define → Ideate → Prototype' },
-          { label: 'Deliverable', val: 'Bundled oral hygiene ecosystem (brush + paste + inhaler + candy)' },
-        ],
-      },
+      "id": "piced",
+      "title": "PicED - Gen-AI Product Strategy",
+      "category": "mba",
+      "result": "",
+      "featured": false,
+      "image": "assets/images/projects/piced.png",
+      "tags": [
+        "Gen-AI",
+        "B2B",
+        "Agile",
+        "DevOps",
+        "Product Roadmap",
+        "GTM"
+      ],
+      "summary": "End-to-end PM for a Gen-AI B2B EdTech platform — BMC, user personas, MOSCOW, roadmap, GTM, Agile implementation.",
+      "detail": {
+        "desc": "Two-course project for PicED — a Gen-AI B2B platform that turns complex teaching concepts into visuals, memes and animations for educators. Course 1, Product Management (IIM Udaipur, guide: Prof. Malthi Satish): user research (73% of educators said making visually appealing content takes too much effort), competitor and market analysis, Business Model Canvas, personas, MoSCoW feature prioritisation, low-fidelity wireframes, MVP, product roadmap, success metrics (DAU, NPS, retention, ARPU, MRR) and GTM strategy. Course 2, Agile & DevOps: a vocabulary-learning version with user segmentation and a pricing survey, run over 3 sprints with a Kanban board, story points, sprint backlogs, daily scrums and retrospectives on Miro.",
+        "outcome": "Full PM lifecycle deliverable — Strategy + Agile implementation",
+        "link": "https://drive.google.com/file/d/1HngpOSLjC04FM8EkURMZw913lI6PaBqi/view",
+        "highlights": [
+          {
+            "label": "Guide",
+            "val": "Malthi Satish, IIM Udaipur"
+          },
+          {
+            "label": "Courses",
+            "val": "Product Management + Agile & DevOps"
+          },
+          {
+            "label": "Methods",
+            "val": "BMC · MOSCOW · Kanban · Sprints · GTM"
+          },
+          {
+            "label": "Market",
+            "val": "B2B Enterprise EdTech"
+          }
+        ]
+      }
     },
     {
-      id:       'industry',
-      title:    'Mahindra & Mahindra - Strategic Analysis',
-      category: 'mba',
-      result:   '',
-      featured: false,
-      image:    'assets/images/projects/industry.png',
-      tags:     ["Porter's Five Forces", 'Strategy', 'Automotive', 'Financial Analysis'],
-      summary:  'Industry structure and competitive strategy analysis of the 4-wheeler automotive sector with M&M as focal firm.',
-      detail: {
-        link:    'https://drive.google.com/file/d/1AMoDZx6B5DCLvNQyYrgndfshLlygex8m/view',
-        desc:    'Deep-dive structural analysis of the Indian 4-wheeler automotive sector with Mahindra & Mahindra as the focal firm. Applied Porter\'s Five Forces, financial performance analysis, and competitive positioning against Tata Motors and Maruti Suzuki to derive strategic recommendations.',
-        outcome: 'Industry analysis + strategic recommendations report',
-        highlights: [
-          { label: 'Guide',       val: 'Shaleen Gopal, IIM Udaipur' },
-          { label: 'Tools',       val: "Porter's Five Forces · Financial Analysis · Strategic Group Map" },
-          { label: 'Competitors', val: 'Tata Motors · Maruti Suzuki' },
-          { label: 'Focal Firm',  val: 'Mahindra & Mahindra — 4-Wheeler Division' },
-        ],
-      },
-    },
-
-    // ── ENGINEERING ─────────────────────────
-    {
-      id:       'thesis',
-      title:    'Precipitate Shape Evolution - M.Tech Thesis',
-      category: 'engineering',
-      result:   '📄 Journal Published',
-      featured: false,
-      image:    'assets/images/projects/thesis.png',
-      tags:     ['MATLAB', 'Phase-Field Modelling', 'ABAQUS', 'LaTeX'],
-      summary:  'Phase-field modelling of precipitate shapes with anisotropic energies. Published in MSMSE.',
-      detail: {
-        desc:    'Developed phase-field models to simulate the equilibrium shape of misfitting precipitates in metallic alloys considering elastic and interfacial anisotropy. CPI: 10/10.',
-        outcome: 'Published in Modelling and Simulation in Materials Science and Engineering',
-        highlights: [
-          { label: 'Advisor', val: 'Dr. Anurag Gupta, IIT Kanpur' },
-          { label: 'Journal', val: 'MSMSE (IOP Publishing)' },
-          { label: 'CPI',     val: '10.0 / 10.0' },
-        ],
-      },
+      "id": "finzo",
+      "title": "FinZo - AI Investment Platform",
+      "category": "mba",
+      "result": "",
+      "featured": false,
+      "image": "assets/images/projects/finzo.png",
+      "tags": [
+        "FinTech",
+        "AI/ML",
+        "GTM",
+        "Business Model",
+        "Portfolio Optimisation"
+      ],
+      "summary": "AI-powered retail investment platform simplifying stock selection and portfolio optimisation for time-strapped investors.",
+      "detail": {
+        "desc": "Conceptualised FinZo — a GenAI investment assistant for time-strapped retail investors, built around the persona 'Anita', a busy professional investing on friends' tips. Provides stock-selection insights, portfolio optimisation and risk profiling. Covered customer journey, Business Model Canvas, market research, feature prioritisation and roadmap, technical architecture (React / React Native, Node.js, PostgreSQL + Redis, AWS, Alpha Vantage and Plaid APIs), 5-year financial projections (30k users in year 1), GTM and valuation (₹6 Cr ask for 10% equity, ₹60 Cr post-money). Industry FinTech course project, IIM Udaipur (guide: Sriram Natarajan).",
+        "outcome": "Full business plan + GTM deliverable",
+        "link": "https://drive.google.com/file/d/1oJVFTQ9RqKuX4HlKGsCr5sjcH6H9L2vw/view",
+        "highlights": [
+          {
+            "label": "Guide",
+            "val": "Sriram Natarajan, IIM Udaipur"
+          },
+          {
+            "label": "Domain",
+            "val": "FinTech / Retail Investment"
+          },
+          {
+            "label": "Problem",
+            "val": "Time-strapped investors need smart, simplified investing"
+          },
+          {
+            "label": "Deliverable",
+            "val": "Business plan + market sizing + GTM + financial projections"
+          }
+        ]
+      }
     },
     {
-      id:       'supra',
-      title:    'SAE SUPRA 2015 - F1 Prototype',
-      category: 'engineering',
-      result:   'Vice-Captain',
-      featured: false,
-      image:    'assets/images/projects/supra.png',
-      tags:     ['CATIA V5', 'Suspension Design', 'Steering', 'FEA', 'Hypermesh', 'SAE'],
-      summary:  'Vice-Captain & Technical Head. Designed, simulated and validated full F1 prototype chassis, suspension & steering. Paper published.',
-      detail: {
-        link:    'https://drive.google.com/open?id=0B5u_OTPvyacbOEMySVljWm5hd1k',
-        desc:    'Led a 25-member team as Vice-Captain and Technical Head at SAE SUPRA India 2015. Responsibilities spanned Chassis Design, CAE Analysis, Steering Geometry, Ergonomics, and overall design leadership — from concept through simulation, manufacturing, and validation. Sponsored by JBM Group and Tata Motors. Research published in Imperial Journal of Interdisciplinary Research.',
-        outcome: 'Competition vehicle built + Research paper published',
-        highlights: [
-          { label: 'Role',        val: 'Vice-Captain · Technical Head · Chassis & CAE Lead' },
-          { label: 'Team Size',   val: '25 students' },
-          { label: 'Sponsors',    val: 'JBM Group · Tata Motors' },
-          { label: 'Publication', val: 'Imperial Journal of Interdisciplinary Research' },
-          { label: 'Tools',       val: 'CATIA V5 · SolidWorks · Hypermesh · Lotus Shark' },
-        ],
-      },
+      "id": "purepaws",
+      "title": "PurePaws - D2C Startup Pitch",
+      "category": "mba",
+      "result": "",
+      "featured": false,
+      "image": "assets/images/projects/purepaws.png",
+      "tags": [
+        "D2C",
+        "Startup",
+        "Subscription",
+        "Pitch Deck",
+        "Pet Care"
+      ],
+      "summary": "Monthly protein-rich, preservative-free dog treats subscription brand — full investor pitch with market research and brand narrative.",
+      "detail": {
+        "desc": "Conceived and pitched a D2C subscription brand for premium dog nutrition — monthly boxes of protein-rich, preservative-free treats (dehydrated chicken instead of preservatives). Told through a customer story ('Timi' and her dog 'Buddy'), with problem research, value against alternatives, marketing and traction plan, market analysis, financial projections, investment ask and an online store concept. Entrepreneurship course project, IIM Udaipur (guide: Prof. Rajesh Pandit).",
+        "outcome": "Investor-ready pitch deck + brand strategy",
+        "link": "https://drive.google.com/file/d/1pAikK0kliuVHlVBPtv4H0suOy8PZsNC_/view",
+        "highlights": [
+          {
+            "label": "Guide",
+            "val": "Rajesh Pandit, IIM Udaipur"
+          },
+          {
+            "label": "Model",
+            "val": "D2C Monthly Subscription — Pet Nutrition"
+          },
+          {
+            "label": "Product",
+            "val": "Protein-rich, preservative-free dog treats"
+          },
+          {
+            "label": "Deliverable",
+            "val": "Market research + brand narrative + financial model"
+          }
+        ]
+      }
     },
     {
-      id:       'baja',
-      title:    'SAE BAJA 2016 - ATV Prototype',
-      category: 'engineering',
-      result:   'Technical Head',
-      featured: false,
-      image:    'assets/images/projects/baja.png',
-      tags:     ['ATV Design', 'CATIA V5', 'ANSYS', 'Simulation', 'Team Lead'],
-      summary:  'Technical Head overseeing all departments for national ATV buggy design, simulation, manufacturing and racing.',
-      detail: {
-        link:    'https://drive.google.com/open?id=1QZC8dgOzfLZqzNeMz49WM1uF794Wv2ma',
-        desc:    'Led the complete technical delivery of an All-Terrain Vehicle buggy for SAE BAJA India 2016 as Technical Head — overseeing all engineering departments: chassis, drivetrain, suspension, brakes, and ergonomics. Covered design, simulation, manufacturing, and race-day operations. Sponsored by JBM Group and Tata Motors.',
-        outcome: 'ATV buggy built and competed nationally',
-        highlights: [
-          { label: 'Role',      val: 'Technical Head — All Departments' },
-          { label: 'Team Size', val: '20 members' },
-          { label: 'Sponsors',  val: 'JBM Group · Tata Motors' },
-          { label: 'Year',      val: '2016 — SAE BAJA India' },
-          { label: 'Tools',     val: 'CATIA V5 · ANSYS · Lotus Shark' },
-        ],
-      },
+      "id": "colgate",
+      "title": "Colgate Rebranding - Design Thinking",
+      "category": "mba",
+      "result": "",
+      "featured": false,
+      "image": "assets/images/projects/colgate.png",
+      "tags": [
+        "Design Thinking",
+        "Rebranding",
+        "User Research",
+        "Brand Strategy"
+      ],
+      "summary": "Redesigned Colgate's brand and product ecosystem using Design Thinking — bundled oral hygiene solution addressing freshness and value needs.",
+      "detail": {
+        "desc": "Design Thinking course project, IIM Udaipur. Reframed the brief to 'a branding-based product and promotion strategy for Colgate Fresh for customers who value freshness'. Ran 8 user interviews with empathy maps, clustered insights into 9 themes and 3 key insights (value-conscious buyers want discount bundles; they want a complementary freshness range from a trusted brand; family habits make people stick to brands). Built the persona 'Ashok' and a POV/HMW, then ideated and prioritised a bundled oral-care kit: Colgate Max Fresh, a hybrid toothbrush with tongue cleaner, a germ-cleaning 'phantom candy', a flavoured freshness inhaler and a teeth wiper, promoted through family-themed TV ads.",
+        "outcome": "Rebranding strategy + bundled product concept",
+        "link": "https://docs.google.com/document/d/1crXnUVC25kP4JCNsrlAAz0R6UUVWcLys/edit",
+        "highlights": [
+          {
+            "label": "Guide",
+            "val": "IIM Udaipur"
+          },
+          {
+            "label": "Framework",
+            "val": "Stanford Design Thinking — Empathise → Define → Ideate → Prototype"
+          },
+          {
+            "label": "Deliverable",
+            "val": "Bundled oral hygiene ecosystem (brush + paste + inhaler + candy)"
+          }
+        ]
+      }
     },
     {
-      id:       'bikestand',
-      title:    'Automatic Bike Stand - B.Tech Project',
-      category: 'engineering',
-      result:   '',
-      featured: false,
-      image:    'assets/images/projects/bikestand.png',
-      tags:     ['Mechanism Design', 'Automation', 'B.Tech'],
-      summary:  'Designed and built an automatic kick-stand mechanism for two-wheelers.',
-      detail: {
-        desc:    'Final B.Tech project - designed and fabricated an automatic retractable bike stand that deploys on engine shutdown and retracts on startup, improving safety.',
-        outcome: 'Working prototype',
-        highlights: [
-          { label: 'Advisor', val: 'Dr. Lokesh Varshney, GBPUAT' },
-        ],
-      },
+      "id": "industry",
+      "title": "Mahindra & Mahindra - Strategic Analysis",
+      "category": "mba",
+      "result": "",
+      "featured": false,
+      "image": "assets/images/projects/industry.png",
+      "tags": [
+        "Porter's Five Forces",
+        "Strategy",
+        "Automotive",
+        "Financial Analysis"
+      ],
+      "summary": "Industry structure and competitive strategy analysis of the 4-wheeler automotive sector with M&M as focal firm.",
+      "detail": {
+        "desc": "Deep-dive structural analysis of the Indian 4-wheeler automotive sector with Mahindra & Mahindra as the focal firm. Applied Porter's Five Forces, financial performance analysis, and competitive positioning against Tata Motors and Maruti Suzuki to derive strategic recommendations. Strategic Management course project, IIM Udaipur (guide: Prof. Shaleen Gopal).",
+        "outcome": "Industry analysis + strategic recommendations report",
+        "link": "https://drive.google.com/file/d/1AMoDZx6B5DCLvNQyYrgndfshLlygex8m/view",
+        "highlights": [
+          {
+            "label": "Guide",
+            "val": "Shaleen Gopal, IIM Udaipur"
+          },
+          {
+            "label": "Tools",
+            "val": "Porter's Five Forces · Financial Analysis · Strategic Group Map"
+          },
+          {
+            "label": "Competitors",
+            "val": "Tata Motors · Maruti Suzuki"
+          },
+          {
+            "label": "Focal Firm",
+            "val": "Mahindra & Mahindra — 4-Wheeler Division"
+          }
+        ]
+      }
     },
-
-    // ── SELF WORK ───────────────────────────
     {
-      id:       'patent',
-      title:    'Hood Latch Assembly - Patent',
-      category: 'self',
-      result:   '📜 Patent Filed & Published',
-      featured: true,
-      image:    'assets/images/projects/patent.png',
-      tags:     ['IP', 'Automotive', 'Innovation', 'R&D'],
-      summary:  'Self-initiated patent: double safety hood latch for vehicles. Filed 2022, published 2024.',
-      detail: {
-        desc:    'Independently conceived and filed a patent for a novel hood latch assembly incorporating a double-safety feature to prevent accidental opening while in motion. Filed at the Indian Patent Office in 2022, published in 2024, currently under examination.',
-        outcome: 'Patent published - under examination at IPO',
-        highlights: [
-          { label: 'Filed',     val: '2022' },
-          { label: 'Published', val: '2024' },
-          { label: 'Status',    val: 'Under Examination - Indian Patent Office' },
-          { label: 'Type',      val: 'Utility Patent - Automotive Safety' },
-        ],
-      },
+      "id": "thesis",
+      "title": "Shape Evolution of Precipitates with Anisotropic Interfacial Energies - M.Tech Thesis",
+      "category": "engineering",
+      "result": "📄 Journal Published",
+      "featured": false,
+      "image": "assets/images/projects/thesis.png",
+      "tags": [
+        "XFEM",
+        "Level Set Method",
+        "MATLAB",
+        "C++",
+        "Computational Mechanics",
+        "LaTeX"
+      ],
+      "summary": "Built an XFEM + level-set framework to find the equilibrium shape of precipitates in alloys with anisotropic interfacial energy. Published in MSMSE (2020).",
+      "detail": {
+        "desc": "M.Tech thesis, Department of Mechanical Engineering, IIT Kanpur (July 2018; supervisor: Dr. Anurag Gupta). Developed a general numerical technique for the equilibrium shape of a misfitting precipitate in a matrix, accounting for anisotropy in both interfacial and elastic bulk energies; earlier shape-optimisation work had ignored anisotropic interfacial energy. Coded in MATLAB and C++: the extended finite element method (XFEM) computes the stress field around a moving interface, and a level set method moves the interface using interfacial and elastic velocity components. Verified the code against known isotropic results, then studied single and interacting precipitates with anisotropic interfaces, covering stability, bifurcation and loss of symmetry. CPI: 10/10. Published as T. Joshi, R. Arora, A. Basak and A. Gupta, 'Equilibrium shape of misfitting precipitates with anisotropic elasticity and anisotropic interfacial energy', Modelling Simul. Mater. Sci. Eng. 28 (2020) 075009.",
+        "outcome": "Published in Modelling and Simulation in Materials Science and Engineering 28 (2020) 075009 · doi.org/10.1088/1361-651X/abae12",
+        "link": "https://drive.google.com/file/d/1O03YuKBJgkSHYsqj3Luq1Mm7RxKzThWA/view?usp=sharing",
+        "highlights": [
+          {
+            "label": "Institute",
+            "val": "IIT Kanpur, 2018"
+          },
+          {
+            "label": "Supervisor",
+            "val": "Dr. Anurag Gupta"
+          },
+          {
+            "label": "Method",
+            "val": "XFEM + level set (MATLAB, C++)"
+          },
+          {
+            "label": "Publication",
+            "val": "MSMSE 28 (2020) 075009"
+          }
+        ]
+      }
     },
     {
-      id:       'powerbi',
-      title:    'PowerBI Project Management Dashboard',
-      category: 'self',
-      result:   'Deployed at M&M',
-      featured: false,
-      image:    'assets/images/projects/powerbi.png',
-      tags:     ['Power BI', 'Data Visualisation', 'Project Management'],
-      summary:  'Self-built PowerBI dashboard for tracking quality metrics across tractor projects at M&M.',
-      detail: {
-        desc:    'Independently designed and deployed a Power BI dashboard at Mahindra Swaraj Division to track project quality KPIs, design release milestones, and issue resolution across multiple tractor families.',
-        outcome: 'Deployed and used across R&D division',
-        highlights: [
-          { label: 'Tool',   val: 'Microsoft Power BI' },
-          { label: 'Impact', val: 'Used across R&D division for project tracking' },
-        ],
-      },
+      "id": "supra",
+      "title": "SAE SUPRA 2015 - F1 Prototype",
+      "category": "engineering",
+      "result": "Vice-Captain",
+      "featured": false,
+      "image": "assets/images/projects/supra.png",
+      "tags": [
+        "CATIA V5",
+        "SolidWorks",
+        "HyperMesh",
+        "SolidWorks Simulation",
+        "Suspension Design",
+        "Steering",
+        "FEA",
+        "SAE"
+      ],
+      "summary": "Vice-Captain & Technical Head. Designed, simulated and validated full F1 prototype chassis, suspension & steering. Paper published.",
+      "detail": {
+        "desc": "Led a 25-member team as Vice-Captain and Technical Head at SAE SUPRA India 2015. Responsibilities spanned Chassis Design, CAE Analysis, Steering Geometry, Ergonomics, and overall design leadership — from concept through simulation, manufacturing, and validation. Modelled in CATIA V5 and SolidWorks; analysed in HyperMesh and SolidWorks Simulation. Design work covered the roll cage, steering system and impact attenuator. Wrote a chassis design report: a space-frame chassis built up from the suspension hard points in AISI 1018 steel, with front, side and rear impact analysis at 60 km/h using Euro NCAP inputs, torsional and bending analysis, and CFD on the bodywork for drag. Sponsored by JBM Group and Tata Motors. Research published in Imperial Journal of Interdisciplinary Research.",
+        "outcome": "Competition vehicle built + Research paper published",
+        "link": "https://drive.google.com/open?id=0B5u_OTPvyacbOEMySVljWm5hd1k",
+        "highlights": [
+          {
+            "label": "Role",
+            "val": "Vice-Captain · Technical Head · Chassis & CAE Lead"
+          },
+          {
+            "label": "Team Size",
+            "val": "25 students"
+          },
+          {
+            "label": "Sponsors",
+            "val": "JBM Group · Tata Motors"
+          },
+          {
+            "label": "Publication",
+            "val": "Imperial Journal of Interdisciplinary Research"
+          },
+          {
+            "label": "Tools",
+            "val": "CATIA V5 · SolidWorks · Hypermesh · Lotus Shark"
+          }
+        ]
+      }
+    },
+    {
+      "id": "baja",
+      "title": "SAE BAJA 2016 - ATV Prototype",
+      "category": "engineering",
+      "result": "Technical Head",
+      "featured": false,
+      "image": "assets/images/projects/baja.png",
+      "tags": [
+        "ATV Design",
+        "CATIA V5",
+        "Lotus Shark",
+        "ANSYS",
+        "Simulation",
+        "Team Lead"
+      ],
+      "summary": "Technical Head overseeing all departments for national ATV buggy design, simulation, manufacturing and racing.",
+      "detail": {
+        "desc": "Led the complete technical delivery of an All-Terrain Vehicle buggy for SAE BAJA India 2016 as Technical Head of a 20-member team — overseeing all engineering departments: chassis, drivetrain, suspension, brakes, and ergonomics. Designed in CATIA, Lotus Shark and ANSYS; built in the college workshop. Covered design, simulation, manufacturing, and race-day operations. Sponsored by JBM Group and Tata Motors.",
+        "outcome": "ATV buggy built and competed nationally",
+        "link": "https://drive.google.com/open?id=1QZC8dgOzfLZqzNeMz49WM1uF794Wv2ma",
+        "highlights": [
+          {
+            "label": "Role",
+            "val": "Technical Head — All Departments"
+          },
+          {
+            "label": "Team Size",
+            "val": "20 members"
+          },
+          {
+            "label": "Sponsors",
+            "val": "JBM Group · Tata Motors"
+          },
+          {
+            "label": "Year",
+            "val": "2016 — SAE BAJA India"
+          },
+          {
+            "label": "Tools",
+            "val": "CATIA V5 · ANSYS · Lotus Shark"
+          }
+        ]
+      }
+    },
+    {
+      "id": "bikestand",
+      "title": "Automatic Bike Stand - B.Tech Project",
+      "category": "engineering",
+      "result": "",
+      "featured": false,
+      "image": "assets/images/projects/bikestand.png",
+      "tags": [
+        "Mechanism Design",
+        "SolidWorks Simulation",
+        "FEA",
+        "Fabrication",
+        "B.Tech"
+      ],
+      "summary": "B.Tech final-year project: a chain-driven mechanism that automatically retracts a two-wheeler's side stand if the rider forgets, to prevent accidents.",
+      "detail": {
+        "desc": "B.Tech final-year project at GBPUAT Pantnagar, in a team of 7 (advisor: Dr. Lokesh Varshney). Designed and fabricated a mechanism that draws power from the chain drive: a modified sprocket turns an axle and pushing lever, which pushes a lifting lever pivoted on the side stand and retracts it once the vehicle moves. Sized parts (high-carbon steel sprocket, AISI 1018 axle and levers) and ran static and fatigue FEA in SolidWorks Simulation for a 60 Nm peak torque (e.g. sprocket: 33 MPa max stress vs 450 MPa yield, minimum load factor 6.4). Built a working prototype on a bicycle for about ₹2,180; the design adapts to any chain-driven two-wheeler.",
+        "outcome": "Working prototype + FEA-validated design, ~₹2,180 build cost",
+        "link": "https://drive.google.com/open?id=0B5u_OTPvyacbQVgxRTVGV2Z3a0k",
+        "highlights": [
+          {
+            "label": "Team",
+            "val": "7 members · advisor Dr. Lokesh Varshney"
+          },
+          {
+            "label": "Analysis",
+            "val": "SolidWorks Simulation (static + fatigue)"
+          },
+          {
+            "label": "Prototype cost",
+            "val": "~₹2,180"
+          }
+        ]
+      }
+    },
+    {
+      "id": "patent",
+      "title": "Hood Latch Assembly for Tractors - Patent",
+      "category": "work",
+      "result": "📜 Patent Published (2024)",
+      "featured": true,
+      "image": "assets/images/projects/patent.png",
+      "tags": [
+        "IP",
+        "Patent",
+        "Automotive",
+        "Tractor",
+        "Mechanism Design",
+        "R&D"
+      ],
+      "summary": "Co-inventor of a double-locking hood latch for tractors, filed by Mahindra & Mahindra in 2022 and published in 2024.",
+      "detail": {
+        "desc": "Co-inventor (with Muneet Sharma) of a hood latch assembly for tractors, filed by Mahindra & Mahindra (Swaraj Division). Tractor hoods can unlock from improper locking or be opened by mistake during operation, which can cause serious accidents. The latch adds an independent second lock so the hood stays secured in all conditions, while being lighter, simpler and cheaper than existing latches. The application also covers methods for opening and closing the hood. Indian patent application 202211015024, filed 18 March 2022, published in the Patent Journal (issue 02/2024).",
+        "outcome": "Application 202211015024 · published 2024 · awaiting examination",
+        "link": "https://drive.google.com/file/d/1G1Gi6Muw5GU1iHYXD21rxgQ-Nb1NOlWf/view",
+        "highlights": [
+          {
+            "label": "Application",
+            "val": "202211015024"
+          },
+          {
+            "label": "Filed",
+            "val": "18 March 2022"
+          },
+          {
+            "label": "Published",
+            "val": "2024 (Patent Journal 02/2024)"
+          },
+          {
+            "label": "Status",
+            "val": "Awaiting examination"
+          },
+          {
+            "label": "Applicant",
+            "val": "Mahindra & Mahindra · co-inventor Muneet Sharma"
+          }
+        ]
+      }
+    },
+    {
+      "id": "powerbi",
+      "title": "Power BI Dashboards - NSM Program & Engineering Change Tracking (Swaraj)",
+      "category": "work",
+      "result": "Deployed at M&M",
+      "featured": false,
+      "image": "assets/images/projects/powerbi.png",
+      "tags": [
+        "Power BI",
+        "Data Visualisation",
+        "Program Management",
+        "DFMEA",
+        "Engineering Change Management"
+      ],
+      "summary": "Built Power BI dashboards at Mahindra Swaraj to track the NSM tractor-styling program across 6 families and engineering change/design-review compliance.",
+      "detail": {
+        "desc": "Independently designed and deployed two Power BI dashboards at Mahindra & Mahindra (Swaraj Division) R&D. (1) NSM dashboard for the program restyling the tractor portfolio: stage status of 6 tractor families (concept to VP1), DFMEA effectiveness by part criticality, open-review-comment (ORC) status by stage, sheet-metal and electrical parts commonality and configurability across families, and weight benchmarks against competitor tractors. (2) Aggregate change dashboard (F22): engineering changes from ECN data by feedback source (sourcing, NPD, quality, R&D, manufacturing, assembly, field quality), alteration rate and release type by project, and design-review adherence and closure days by project and sub-aggregate.",
+        "outcome": "Used for program and design-review tracking across R&D projects",
+        "highlights": [
+          {
+            "label": "Tool",
+            "val": "Microsoft Power BI"
+          },
+          {
+            "label": "Dashboards",
+            "val": "NSM program (6 tractor families) + F22 engineering change"
+          },
+          {
+            "label": "Use",
+            "val": "Program and design-review tracking in R&D"
+          }
+        ]
+      }
+    },
+    {
+      "id": "fracture",
+      "title": "Crack Analysis - Fracture & Fatigue",
+      "category": "engineering",
+      "result": "",
+      "featured": false,
+      "tags": [
+        "Abaqus",
+        "Fracture Mechanics",
+        "FEA",
+        "Stress Intensity Factor"
+      ],
+      "summary": "Abaqus crack analysis of a plate with an elliptical hole, comparing stress intensity factors from several methods with analytic results.",
+      "detail": {
+        "desc": "IIT Kanpur course project (guide: Dr. P. Venkitanarayanan). Modelled a plate with an elliptical hole in Abaqus and computed stress intensity factors using several numerical methods, then compared them with analytic solutions.",
+        "outcome": "Course project report",
+        "link": "https://drive.google.com/open?id=0B5u_OTPvyacbdXNiTTFOV0Q3LXc"
+      }
+    },
+    {
+      "id": "composites",
+      "title": "Composite Preparation & Analysis",
+      "category": "engineering",
+      "result": "",
+      "featured": false,
+      "tags": [
+        "Composites",
+        "Tensile Testing",
+        "MATLAB",
+        "Classical Laminate Theory"
+      ],
+      "summary": "Prepared and tested 2-layer and 4-layer composites, compared with classical laminate theory in MATLAB.",
+      "detail": {
+        "desc": "IIT Kanpur course project (guide: Dr. P. Venkitanarayanan). Fabricated 2-layer and 4-layer composite laminates, measured density with a burn test and ran tensile tests, then compared results with analytic values and classical laminate theory implemented in MATLAB.",
+        "outcome": "Lab-tested composites + project report",
+        "link": "https://drive.google.com/open?id=1t2EiNV8evAiXcXunV4MHq86tC4Tjcr4c"
+      }
+    },
+    {
+      "id": "gradient-elasticity",
+      "title": "Gradient Elasticity - Mode I Crack & Continuum Mechanics Reports",
+      "category": "engineering",
+      "result": "",
+      "featured": false,
+      "tags": [
+        "Continuum Mechanics",
+        "Gradient Elasticity",
+        "Abaqus",
+        "Tensor Calculus"
+      ],
+      "summary": "Mode I crack displacement using gradient elasticity, compared with the classical solution and validated in Abaqus.",
+      "detail": {
+        "desc": "IIT Kanpur Continuum Mechanics course (guide: Dr. B. L. Sharma). Derived Mode I crack displacement under gradient elasticity, compared it with the classical solution and validated it in Abaqus. Other course reports: shape bifurcations of inclusions in a matrix, derivatives with respect to second-order tensors, kinematics of a 3D body accreting/declining with time, and a proof of the Cayley-Hamilton theorem.",
+        "outcome": "Main report + 4 supporting course reports",
+        "link": "https://drive.google.com/file/d/1sq8146Otqz_913ES7VVmzg5lRbN4nc1s/view"
+      }
+    },
+    {
+      "id": "swaraj-dt",
+      "title": "Swaraj Tractors - Digital Transformation Strategy",
+      "category": "mba",
+      "result": "",
+      "featured": false,
+      "tags": [
+        "Digital Transformation",
+        "Strategy",
+        "Agri-Equipment",
+        "Roadmap",
+        "Change Management"
+      ],
+      "summary": "Digital transformation strategy for Swaraj Tractors across R&D, customer experience and supply chain, with a phased roadmap and enablers.",
+      "detail": {
+        "desc": "Digital Transformation (DTM) group project, IIM Udaipur. Diagnosed Swaraj's challenges (manual processes, little real-time data, weak supply-chain coordination, low customer engagement) and built a 'Mera Swaraj' transformation framework on three pillars: data-driven, collaborative R&D with agile testing; customer experience (modular tractors, online portal and virtual showroom, mobile service units, subscription maintenance); and a connected, IoT-enabled supply chain with built-in quality checks. Added a phased roadmap and enablers: BU digital champions, upskilling and cross-functional teams.",
+        "outcome": "Transformation framework + phased roadmap",
+        "link": "https://drive.google.com/file/d/1Ro4X2onxEypJZV8UrF58GelhdPRetRCj/view"
+      }
+    },
+    {
+      "id": "swaraj-iot",
+      "title": "Smart Farming IoT System for Swaraj Tractors",
+      "category": "mba",
+      "result": "",
+      "featured": false,
+      "tags": [
+        "IoT",
+        "AgriTech",
+        "AWS",
+        "Sensors",
+        "Solution Architecture",
+        "Precision Farming"
+      ],
+      "summary": "Soil-health IoT system for Swaraj tractor owners: on-tractor sensors, AWS analytics and a farmer app, with architecture, roadmap and cost viability.",
+      "detail": {
+        "desc": "Internet of Things group project, IIM Udaipur. Designed a soil-health monitoring system for Swaraj tractor owners: pH, moisture and NPK sensors (e.g. SEN0169, Teros 12, CropX) mounted on the tractor, AWS cloud analytics and a farmer mobile app. Mapped capabilities from first-order (real-time soil data, variable-rate input dispensing) to higher-order (AI crop selection, weather-linked crop management) and business outcomes (yield, input cost, sustainability). Covered user persona, high- and low-level architecture, tech stack, roadmap and cost and viability analysis.",
+        "outcome": "IoT solution design + architecture + viability analysis",
+        "link": "https://drive.google.com/file/d/1mHO41ApaPEKsA7d0y-sbSiWF4DRjpcyV/view"
+      }
+    },
+    {
+      "id": "shopping-trends",
+      "title": "Customer Shopping Insights - Segmentation, ANN & Market Basket",
+      "category": "mba",
+      "result": "",
+      "featured": false,
+      "tags": [
+        "R",
+        "Python",
+        "Clustering",
+        "ANN",
+        "Market Basket Analysis",
+        "Recommender Systems"
+      ],
+      "summary": "Retail analytics on a year of shopping data: customer clustering, an ANN to predict spend, market basket analysis and a recommendation system.",
+      "detail": {
+        "desc": "Advanced Analytics II group project, IIM Udaipur. Cleaned and encoded a year of retail shopping data (outliers capped at 5th/95th percentile). Clustered customers into 3 segments (older high spenders, younger budget-conscious, middle-aged moderate spenders), built an ANN to predict purchase amount, ran market basket analysis (min support 10%, confidence 60%) and a recommendation system, in R and Python. Recommended segment-specific offers, retention incentives for the at-risk younger segment, and high-lift bundles for cross-selling.",
+        "outcome": "Segmentation + purchase prediction + cross-sell recommendations",
+        "link": "https://drive.google.com/file/d/1NlfBecPqSeD0PPfu5Jzb9c-dHE91mI9o/view"
+      }
+    },
+    {
+      "id": "cnn-retinopathy",
+      "title": "CNN for Diabetic Retinopathy Detection",
+      "category": "mba",
+      "result": "",
+      "featured": false,
+      "tags": [
+        "Deep Learning",
+        "CNN",
+        "Computer Vision",
+        "Python",
+        "Google Colab"
+      ],
+      "summary": "Built a CNN in Google Colab to classify diabetic retinopathy from retina images, and compared CNNs with DNNs and YOLO.",
+      "detail": {
+        "desc": "AI course project (AIFW), IIM Udaipur. Built a CNN on a public Kaggle retina-image dataset (224x224, Gaussian-filtered) to detect diabetic retinopathy: convolution and max-pooling layers, batch normalisation, ReLU and softmax, trained with Adam (learning rate 1e-5) for 30 epochs. Explained CNN architecture, compared it with DNNs and covered YOLO for real-time detection.",
+        "outcome": "Working CNN notebook + explainer deck",
+        "link": "https://drive.google.com/file/d/15hLEw1Y-agj8ctalnmT3jV_kjxGCAeHV/view"
+      }
+    },
+    {
+      "id": "huawei-cloud",
+      "title": "Cloud Solution for Clinical-Trial Inventory (Huawei Cloud)",
+      "category": "mba",
+      "result": "",
+      "featured": false,
+      "tags": [
+        "Cloud Architecture",
+        "Huawei Cloud",
+        "AI/ML",
+        "Healthcare",
+        "ERP"
+      ],
+      "summary": "Huawei Cloud architecture to automate inventory forecasting and reordering for a pharma company's clinical trials.",
+      "detail": {
+        "desc": "Cloud Technology & Security group report, IIM Udaipur (Prof. Raja Ramkaran Reddy Rudravaram). For a pharma company whose legacy ERP and manual reordering caused chemical shortages during clinical trials, proposed a Huawei Cloud solution: EIHealth for AI inventory monitoring, ModelArts for demand forecasting with automatic reorder triggers, and Data Lake Insight to unify ERP and app data. Estimated $50k–100k for a pilot and $250k–500k for full deployment.",
+        "outcome": "Solution architecture + cost estimate report",
+        "link": "https://drive.google.com/file/d/13iWdAj4BHJTEv_YsLkeuHgZithlysbd9/view"
+      }
+    },
+    {
+      "id": "blockchain-ipr",
+      "title": "Blockchain-based IP Rights Management",
+      "category": "mba",
+      "result": "",
+      "featured": false,
+      "tags": [
+        "Blockchain",
+        "Smart Contracts",
+        "IP Management"
+      ],
+      "summary": "Blockchain platform concept for IP ownership records, automated royalties and transparent licensing.",
+      "detail": {
+        "desc": "Blockchain course project (BTM), IIM Udaipur. Proposed a blockchain platform for intellectual property rights: an immutable ownership ledger, smart contracts that pay royalties automatically, and transparent licensing terms. It targets piracy and counterfeiting, slow royalty payouts, ownership disputes and the single point of failure in central IP registries.",
+        "outcome": "Solution concept deck",
+        "link": "https://drive.google.com/file/d/1sTlcPmx7EKtg_EJM3eZFNJCgTwnIuj4i/view"
+      }
+    },
+    {
+      "id": "bewakoof-dm",
+      "title": "Bewakoof.com - Digital Marketing Strategy",
+      "category": "mba",
+      "result": "",
+      "featured": false,
+      "tags": [
+        "Digital Marketing",
+        "Content Strategy",
+        "Social Media",
+        "GenAI Creatives",
+        "D2C"
+      ],
+      "summary": "Digital marketing strategy for Bewakoof.com targeting Gen Z and millennials, with personas, content pillars, a UGC campaign and AI-made creatives.",
+      "detail": {
+        "desc": "Digital Marketing group project (3 milestones), IIM Udaipur. Built a digital marketing strategy for Bewakoof.com aimed at 18–35 year-olds: personas ('Trendy Tara', 'Casual Karan'), customer journey, content pillars (fashion, memes and pop culture, user-generated content, sustainability), a #BewakoofStyleChallenge UGC campaign, a metaverse styling concept and sample posts. Made reels, lookbooks and campaign creatives with AI tools (InVideo, DALL·E) and benchmarked Instagram presence against The Souled Store and Urban Monkey.",
+        "outcome": "Strategy deck + AI-generated campaign creatives",
+        "link": "https://drive.google.com/file/d/1clExNRjwnFM81WyUrFyJzULlablS4AJo/view"
+      }
+    },
+    {
+      "id": "nothing-phone",
+      "title": "Nothing Phone - India Market Positioning",
+      "category": "mba",
+      "result": "",
+      "featured": false,
+      "tags": [
+        "Marketing Strategy",
+        "STP",
+        "5C Analysis",
+        "Positioning",
+        "Consumer Tech"
+      ],
+      "summary": "5C analysis, STP and marketing mix for Nothing's entry into the Indian smartphone market.",
+      "detail": {
+        "desc": "Marketing Management project, Term 1, IIM Udaipur. Ran a 5C analysis, segmentation, targeting and positioning, and a marketing mix for Nothing in India, using Statista market data. Picked 'Pragmatics' (tech-savvy 25–40 year-olds earning ₹8L+ who value design, privacy and performance) as the target segment, defined points of difference and parity, and proposed value-based pricing and a promotion plan.",
+        "outcome": "Positioning strategy report",
+        "link": "https://drive.google.com/file/d/16WtQWOBaMZR5xhevuZcPoN0HWJWLtKIK/view"
+      }
+    },
+    {
+      "id": "inr-internationalisation",
+      "title": "INR Internationalisation - Strengthening Indian Financial Markets",
+      "category": "mba",
+      "result": "",
+      "featured": false,
+      "tags": [
+        "Policy Analysis",
+        "Financial Markets",
+        "FPI",
+        "KYC",
+        "Regulation"
+      ],
+      "summary": "Policy review of measures to prepare Indian financial markets for wider INR internationalisation, focused on easing KYC for foreign portfolio investors.",
+      "detail": {
+        "desc": "Group project (FTM course), IIM Udaipur, team of 7. Reviewed measures to strengthen Indian financial markets for wider INR internationalisation: FPI KYC and registration, onshore–offshore market integration, a 24x5 INR market, BISIP in INR and bond-index inclusion. Owned the KYC section: mapped SEBI vs RBI inconsistencies and paperwork bottlenecks for foreign portfolio investors, recommended digital KYC (digital signatures, SWIFT confirmation from global custodians, KYC at investment-manager level), and checked them against FTP 2023 and the SEBI Master Circular 2023.",
+        "outcome": "Policy recommendations deck",
+        "link": "https://drive.google.com/file/d/1jqaM2VSWTPQIbTK-XAZPhDIWwzkJMCBa/view"
+      }
+    },
+    {
+      "id": "ob-structural-audit",
+      "title": "Structural Audit - Udaipur Field Club",
+      "category": "mba",
+      "result": "",
+      "featured": false,
+      "tags": [
+        "Organisational Behaviour",
+        "Structural Audit",
+        "Interviews"
+      ],
+      "summary": "Organisational structure audit of a local club through staff interviews, identifying promotion gaps and functional silos.",
+      "detail": {
+        "desc": "Organisational Behaviour project, Term 1, IIM Udaipur. Interviewed 5 employees at different levels of Udaipur Field Club using a structured questionnaire, and audited its structure across division of labour, coordination, hierarchy and informal relationships. Found inconsistent, discretion-based promotions with no performance appraisal or feedback system, and functional silos with no formal cross-team collaboration.",
+        "outcome": "Structural audit paper",
+        "link": "https://drive.google.com/file/d/1mtILFfWdcPYjEG-WGKa0QkfV4MNcxcdn/view"
+      }
+    },
+    {
+      "id": "google-genai-strategy",
+      "title": "Google's Strategic Options in the GenAI Era",
+      "category": "mba",
+      "result": "",
+      "featured": false,
+      "tags": [
+        "Competitive Strategy",
+        "Generative AI",
+        "Big Tech"
+      ],
+      "summary": "Competitive strategy analysis of Google's response to ChatGPT, recommending a phased hybrid approach.",
+      "detail": {
+        "desc": "Advanced Competitive Strategy group assignment, IIM Udaipur (Feb 2025). Weighed Google's options after ChatGPT: a standalone chatbot, GenAI in Search, AI in Workspace, developer APIs, and open vs closed models. Recommended a phased hybrid strategy: a controlled chatbot launch, then gradual integration into core products, then expansion of the developer and cloud ecosystem.",
+        "outcome": "Strategy recommendation report",
+        "link": "https://drive.google.com/file/d/1xqNkrAByPRTgz8Xctck0MK2QuFobZVna/view"
+      }
+    },
+    {
+      "id": "confianza",
+      "title": "Data Strategy & Governance Turnaround - Confianza (Case)",
+      "category": "mba",
+      "result": "Individual",
+      "featured": false,
+      "tags": [
+        "Data Strategy",
+        "Data Governance",
+        "MDM",
+        "Single Source of Truth"
+      ],
+      "summary": "Individual case study: a data strategy and governance roadmap for a 50-country firm with 100+ unintegrated applications.",
+      "detail": {
+        "desc": "Individual BDDO case study, IIM Udaipur. Writing as a consultant to Confianza, a firm in 50+ countries with 100+ unintegrated applications and high SG&A, diagnosed its poor data strategy (4–5 week quarterly close, manual reconciliation). Proposed rationalising applications by stability and usage, a single source of truth, master data management and a four-phase roadmap (discovery, planning, execution, institutionalisation) with a risk–reward matrix.",
+        "outcome": "One-page consulting case report",
+        "link": "https://drive.google.com/file/d/1Ej2wyZQ1zAMySSADl0DHr4D9w-txm_QX/view"
+      }
+    },
+    {
+      "id": "sands-site-selection",
+      "title": "Plant Site Selection Report - Sands Corporation (Case)",
+      "category": "mba",
+      "result": "Individual",
+      "featured": false,
+      "tags": [
+        "Business Writing",
+        "Decision Analysis",
+        "Operations"
+      ],
+      "summary": "Individual management report recommending a new plant site using a weighted scoring model.",
+      "detail": {
+        "desc": "Individual Written Management Communication (WMC) report, IIM Udaipur (June 2024). Writing as VP Manufacturing, compared two plant sites for a military aircraft contract (Kimberley Street vs Hampton) on labour availability, operating cost, smooth functioning and long-term prospects with a weighted scoring model, and recommended Hampton with construction starting within two weeks.",
+        "outcome": "Management report",
+        "link": "https://drive.google.com/file/d/1JEorTChs6iz4bOuLiyRCorWZTjhBKluc/view"
+      }
+    },
+    {
+      "id": "involuntary-car-safety",
+      "title": "Enhancing Car Safety Using Involuntary Actions",
+      "category": "engineering",
+      "result": "",
+      "featured": false,
+      "tags": [
+        "Automotive Safety",
+        "Sensors",
+        "Biometrics",
+        "Concept Design",
+        "ECU"
+      ],
+      "summary": "B.Tech concept for theft-proof car ignition that verifies the driver from involuntary actions (door opening, foot and seat pressure, posture, steering grip).",
+      "detail": {
+        "desc": "B.Tech paper and presentation at College of Technology, GBPUAT Pantnagar, in a team of 3. Proposed using a driver's involuntary actions as an identity check before ignition: door-opening time and speed, first-foot pressure, seat pressure and settling time, head distance from the roof, and steering grip position. These are sensed with Hall-effect sensors, a door-velocity gauge, S-type load cells, occupant-classification pressure sensors, IR and touch/position sensors feeding an electronic control module. Benchmarked against OnStar, LoJack and Viper/Cobra systems, and set out merits (no password, hard to fake) and limits (needs high accuracy; suits cars with one or two drivers).",
+        "outcome": "Concept paper + presentation",
+        "link": "https://drive.google.com/file/d/1xOP_-Y6cJetNog5pSZwotOYnmQY7Cgdu/view"
+      }
     },
   ],
 
@@ -738,10 +1383,10 @@ const DATA = {
     patent: {
       id:     'patent-hood',
       title:  'Hood Latch Assembly for Vehicles and a Method Thereof',
-      body:   'Novel double safety feature locking arrangement for vehicle hoods.',
+      body:   'Double-locking hood latch for tractors; Indian application 202211015024 (co-inventor).',
       filed:  '2022',
       pub:    '2024',
-      status: 'Under Examination',
+      status: 'Awaiting Examination',
       office: 'Indian Patent Office',
     },
     publications: [
@@ -751,7 +1396,7 @@ const DATA = {
         title:  'Equilibrium Shape of Misfitting Precipitates with Anisotropic Elasticity and Anisotropic Interfacial Energy',
         venue:  'Modelling and Simulation in Materials Science and Engineering',
         pub:    'IOP Publishing',
-        tags:   ['Materials Science', 'Phase-Field', 'MATLAB'],
+        tags:   ['Materials Science', 'XFEM', 'Level Set', 'MATLAB'],
       },
       {
         id:     'pub2',
