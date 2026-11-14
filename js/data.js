@@ -47,11 +47,11 @@ const DATA = {
      STATS BAR - 5 key numbers below hero
   ───────────────────────────────────────── */
   stats: [
-    { num: '4.5+', label: 'Years Cross-sector Exp.',  icon: '⚡', color: 'blue'   },
+    { num: '5+',   label: 'Years Cross-sector Exp.',  icon: '⚡', color: 'blue'   },
     { num: '7+',    label: 'Articles Published',        icon: '✍️', color: 'indigo' },
     { num: '30+',  label: 'Certifications',            icon: '📜', color: 'gold'   },
     { num: '3',    label: 'Gold Medals',               icon: '🥇', color: 'green'  },
-    { num: '4',    label: 'Research & Patents',        icon: '🔬', color: 'purple' },
+    { num: '5',    label: 'Research & Patents',        icon: '🔬', color: 'purple' },
   ],
 
   /* ─────────────────────────────────────────
@@ -62,14 +62,14 @@ const DATA = {
     body:    "I'm drawn to work that sits between disciplines - where engineering rigour meets strategy and ground-level execution. Three-institution gold medalist. Patent holder. 4 peer-reviewed papers. Always building something that matters.",
     highlights: [
      /* { row:'top',    num:'4.5+', title:'Cross-sector Experience',    desc:'GovTech · Automotive R&D · MBA · Engineering',                              color:'#1e3a8a', image:'https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&h=600&fit=crop&auto=format' },*/
-       { row:'top',    num:'4.5+', title:'Cross-sector Experience',    desc:'GovTech · Automotive R&D · MBA · Engineering',                              color:'#1e3a8a', image:'assets/images/About_CSExp.png' },
+       { row:'top',    num:'5+',   title:'Cross-sector Experience',    desc:'GovTech · Automotive R&D · MBA · Engineering',                              color:'#1e3a8a', image:'assets/images/About_CSExp.png' },
       { row:'top',    num:'3',    title:'Gold Medals',                desc:'IIMU Scholastic · IITK Top 7% · GBPUAT Vice-Chancellor\'s Gold',            color:'#92400e', image:'assets/images/About_Gold.png' },
       { row:'top',    num:'',     title:'Digital Transformation',     desc:'Digital sectoral programmes at state scale - policy to Go-Live',   color:'#0f4c75', image:'assets/images/About_Digital.png' },
-      { row:'top',    num:'',     title:'AI Product Execution',       desc:'PRDs, Figma, vendor mgmt & A/B experiments - 14L+ farmers reached',         color:'#3b0764', image:'assets/images/About_AIproduct.png' },
+      { row:'top',    num:'',     title:'AI Product Execution',       desc:'PRDs, Figma, vendor mgmt & A/B experiments - deployed at scale',           color:'#3b0764', image:'assets/images/About_AIproduct.png' },
       { row:'bottom', num:'',     title:'Program Management',         desc:'Cross-functional R&D & GovTech programmes at Mahindra & Samagra',           color:'#064e3b', image:'assets/images/About_Program.png' },
       { row:'bottom', num:'30+',  title:'Certifications',             desc:'CSPO · Six Sigma GB · AI · Product Strategy & more',                        color:'#1a3a1a', image:'assets/images/About_Certifications.png' },
       { row:'bottom', num:'7',    title:'Articles Published',         desc:'AI, product strategy, engineering & society - LinkedIn',                    color:'#312e81', image:'assets/images/About_Articles.png' },
-      { row:'bottom', num:'3',    title:'Research & Patents',         desc:'Peer-reviewed publications & 1 granted patent - IIT Kanpur',                color:'#4a1942', image:'assets/images/About_Research.png' },
+      { row:'bottom', num:'5',    title:'Research & Patents',         desc:'Peer-reviewed publications & 1 granted patent',                            color:'#4a1942', image:'assets/images/About_Research.png' },
     ],
   },
 
@@ -1317,7 +1317,7 @@ const DATA = {
         { name: 'Power BI', level: 3 }, { name: 'Python', level: 2 }, { name: 'R', level: 2 },
         { name: 'JMP', level: 2 }, { name: 'n8n', level: 2 }, { name: 'OpenAI API', level: 2 },
       ]},
-      { title: 'Engineering', tools: [
+      { title: 'Other tools', tools: [
         { name: 'CATIA V5', level: 4 }, { name: 'MATLAB', level: 4 }, { name: 'SolidWorks', level: 3 },
         { name: 'Abaqus', level: 3 }, { name: 'NX', level: 2 }, { name: 'C++', level: 2 },
       ]},
