@@ -706,44 +706,41 @@ function closeProjPanel() {
 function renderSkills() {
   const el = document.getElementById('skills-content');
   if (!el) return;
+  const s = DATA.skills;
 
-  const groups = DATA.skills.groups.map(g => `
-    <div class="skill-group fade-in">
-      <div class="sg-title"><span>${g.icon}</span>${g.title}</div>
-      <div class="sg-chips">${g.chips.map(c => `<span class="sg-chip">${c}</span>`).join('')}</div>
+  const mkBar = (level, cls) =>
+    `<div class="sk-bar ${cls}">${Array.from({length: 4}, (_, i) =>
+      `<span class="sk-seg${i < level ? ' sk-seg--on' : ''}"></span>`
+    ).join('')}</div>`;
+
+  const capHTML = s.capabilities.map(c => `
+    <div class="sk-cap">
+      <div class="sk-cap-name">${c.name}</div>
+      ${mkBar(c.level, 'sk-bar--cap')}
+      <div class="sk-cap-kw">${c.keywords}</div>
     </div>`).join('');
 
-  const bars = DATA.skills.bars.map(b => `
-    <div class="skill-bar">
-      <div class="sb-row">
-        <span>${b.name}</span>
-        <span class="sb-level">${b.level}</span>
-      </div>
-      <div class="sb-track"><div class="sb-fill" data-pct="${b.pct}"></div></div>
+  const toolHTML = s.toolGroups.map(g => `
+    <div class="sk-tool-card fade-in">
+      <div class="sk-tool-title">${g.title}</div>
+      ${g.tools.map(t => `
+        <div class="sk-tool-row">
+          <span class="sk-tool-name">${t.name}</span>
+          ${mkBar(t.level, 'sk-bar--tool')}
+        </div>`).join('')}
     </div>`).join('');
 
   el.innerHTML = `
-    <div class="skills-wrap">
-      <div class="skill-groups">${groups}</div>
-      <div class="skill-bars-panel fade-in">
-        <div class="sbp-title">Key Proficiencies</div>
-        ${bars}
+    <div class="sk-intro fade-in">${s.intro}</div>
+    <div class="sk-body">
+      <div class="sk-cap-panel fade-in">
+        <div class="sk-cap-label">Capabilities</div>
+        ${capHTML}
+      </div>
+      <div class="sk-tool-grid">
+        ${toolHTML}
       </div>
     </div>`;
-
-  // Animate bars on scroll
-  const barsObserver = new IntersectionObserver(entries => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        e.target.querySelectorAll('.sb-fill').forEach(fill => {
-          fill.style.width = fill.dataset.pct + '%';
-        });
-        barsObserver.unobserve(e.target);
-      }
-    });
-  }, { threshold: 0.3 });
-  const barsPanel = el.querySelector('.skill-bars-panel');
-  if (barsPanel) barsObserver.observe(barsPanel);
 }
 
 /* ─────────────────────────────────────────

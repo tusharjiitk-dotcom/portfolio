@@ -1300,37 +1300,27 @@ const DATA = {
      SKILLS
   ───────────────────────────────────────── */
   skills: {
-    groups: [
-      {
-        title: 'Product & Strategy Tools',
-        icon:  '🧠',
-        chips: ['Figma', 'Miro', 'JIRA', 'PRD & Roadmapping', 'OKRs', 'Product Management', 'Design Thinking', 'Agile / Scrum / Kanban'],
-      },
-      {
-        title: 'AI, Automation & Data',
-        icon:  '🤖',
-        chips: ['n8n (AI Agent Automation)', 'OpenAI / LLMs', 'Power BI', 'SQL', 'Python', 'R Programming', 'MATLAB', 'Stitch', 'Lovable'],
-      },
-      {
-        title: 'Engineering & CAD / CAE',
-        icon:  '📐',
-        chips: ['CATIA V5', 'NX CAD', 'SolidWorks', 'AutoCAD', 'ABAQUS FEA', 'Lotus Shark', 'C++', 'LaTeX', 'MATLAB'],
-      },
-      {
-        title: 'Frameworks & Methods',
-        icon:  '📋',
-        chips: ['DFMEA–DVP', 'PDLC / Stage-Gate', 'Lean Six Sigma', 'Value Stream Mapping', 'Issue-Tree', 'RCA', 'Change Management', 'Digital Transformation'],
-      },
+    intro: 'Bars show depth of hands-on, professional use.',
+    capabilities: [
+      { name: 'Program & change management',   level: 4, keywords: 'Governance · SoW & RFP · vendors · stakeholders · adoption' },
+      { name: 'Engineering & R&D',             level: 4, keywords: 'DFMEA–DVP · stage-gate · CAD / CAE · XFEM modelling' },
+      { name: 'Product management',            level: 3, keywords: 'PRDs · user research · prioritisation · roadmap & GTM' },
+      { name: 'Digital transformation & AI',   level: 3, keywords: 'DT roadmaps · AI use cases · data strategy · AI agents' },
+      { name: 'Data & analytics',              level: 3, keywords: 'Power BI · predictive models · segmentation · experiments' },
     ],
-    bars: [
-      { name: 'Product Strategy & PRD', level: 'Advanced',      pct: 90 },
-      { name: 'Figma / Wireframing',    level: 'Intermediate',  pct: 75 },
-      { name: 'Power BI',               level: 'Advanced',      pct: 88 },
-      { name: 'MS Excel (Advanced)',     level: 'Advanced',      pct: 93 },
-      { name: 'n8n / AI Automation',    level: 'Intermediate',  pct: 72 },
-      { name: 'CATIA V5',               level: 'Advanced',      pct: 92 },
-      { name: 'Python',                 level: 'Intermediate',  pct: 68 },
-      { name: 'MATLAB',                 level: 'Advanced',      pct: 90 },
+    toolGroups: [
+      { title: 'Product', tools: [
+        { name: 'Excel', level: 4 }, { name: 'Miro', level: 3 }, { name: 'Stitch', level: 3 },
+        { name: 'Lovable', level: 3 }, { name: 'Figma', level: 2 }, { name: 'JIRA', level: 2 },
+      ]},
+      { title: 'Data & AI', tools: [
+        { name: 'Power BI', level: 3 }, { name: 'Python', level: 2 }, { name: 'R', level: 2 },
+        { name: 'JMP', level: 2 }, { name: 'n8n', level: 2 }, { name: 'OpenAI API', level: 2 },
+      ]},
+      { title: 'Engineering', tools: [
+        { name: 'CATIA V5', level: 4 }, { name: 'MATLAB', level: 4 }, { name: 'SolidWorks', level: 3 },
+        { name: 'Abaqus', level: 3 }, { name: 'NX', level: 2 }, { name: 'C++', level: 2 },
+      ]},
     ],
   },
 
