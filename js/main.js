@@ -775,12 +775,13 @@ function renderResearch() {
 
   const pubsHTML = `<div class="pub-list">
     ${r.publications.map(p => `
-      <div class="pub-item fade-in" onclick="openPanel('pub-${p.id}')">
-        <div class="pub-icon">📄</div>
-        <div>
-          <div class="pub-type">${p.type} · ${p.pub}</div>
+      <div class="pub-item${p.featured ? ' pub-item--featured' : ''} fade-in">
+        <div class="pub-icon">${p.featured ? '🔬' : '📄'}</div>
+        <div style="flex:1;min-width:0;">
+          <div class="pub-type">${p.type} · ${p.pub} · ${p.year}</div>
           <div class="pub-title">${p.title}</div>
           <div class="pub-venue">${p.venue}</div>
+          ${p.doi ? `<a class="pub-doi" href="${p.doi}" target="_blank" rel="noopener" onclick="event.stopPropagation()">↗ View paper</a>` : ''}
           <div class="pub-tags">${p.tags.map(t => `<span class="chip chip-blue">${t}</span>`).join('')}</div>
         </div>
       </div>`).join('')}

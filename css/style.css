@@ -1525,11 +1525,17 @@ ul { list-style: none; }
   box-shadow: var(--sh);
 }
 .pub-item:hover { box-shadow: var(--sh-md); border-color: var(--accent-bd); transform: translateY(-1px); }
+.pub-item--featured {
+  border-color: #c7d2fe; border-left: 4px solid #1e3a8a; background: #f8f9ff;
+}
+.pub-item--featured:hover { border-color: #93a8f4; }
 .pub-icon   { font-size: 26px; flex-shrink: 0; }
 .pub-type   { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--accent); margin-bottom: 5px; }
 .pub-title  { font-size: 14.5px; font-weight: 700; margin-bottom: 5px; color: var(--text); line-height: 1.35; }
-.pub-venue  { font-size: 12.5px; color: var(--text-mid); }
-.pub-tags   { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 10px; }
+.pub-venue  { font-size: 12.5px; color: var(--text-mid); margin-bottom: 6px; }
+.pub-doi    { display: inline-block; font-size: 12px; font-weight: 600; color: var(--accent); text-decoration: none; margin-bottom: 8px; }
+.pub-doi:hover { text-decoration: underline; }
+.pub-tags   { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 6px; }
 
 /* ─────────────────────────────────────────
    15. MORE SECTION — Tabs
