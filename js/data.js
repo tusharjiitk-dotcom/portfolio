@@ -69,7 +69,7 @@ const DATA = {
       { row:'bottom', num:'',     title:'Program Management',         desc:'Cross-functional R&D & GovTech programmes at Mahindra & Samagra',           color:'#064e3b', image:'assets/images/About_Program.png' },
       { row:'bottom', num:'30+',  title:'Certifications',             desc:'CSPO · Six Sigma GB · AI · Product Strategy & more',                        color:'#1a3a1a', image:'assets/images/About_Certifications.png' },
       { row:'bottom', num:'7',    title:'Articles Published',         desc:'AI, product strategy, engineering & society - LinkedIn',                    color:'#312e81', image:'assets/images/About_Articles.png' },
-      { row:'bottom', num:'5',    title:'Research & Patents',         desc:'Peer-reviewed publications & 1 granted patent',                            color:'#4a1942', image:'assets/images/About_Research.png' },
+      { row:'bottom', num:'5',    title:'Research & Patents',         desc:'Peer-reviewed publications & 1 patent under examination',                  color:'#4a1942', image:'assets/images/About_Research.png' },
     ],
   },
 
