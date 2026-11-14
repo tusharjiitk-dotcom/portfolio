@@ -730,8 +730,15 @@ function renderSkills() {
         </div>`).join('')}
     </div>`).join('');
 
+  const secHead = document.querySelector('#skills .sec-head');
+  if (secHead && !secHead.querySelector('.sk-intro')) {
+    const intro = document.createElement('div');
+    intro.className = 'sk-intro';
+    intro.textContent = s.intro;
+    secHead.appendChild(intro);
+  }
+
   el.innerHTML = `
-    <div class="sk-intro fade-in">${s.intro}</div>
     <div class="sk-body">
       <div class="sk-cap-panel fade-in">
         <div class="sk-cap-label">Capabilities</div>
