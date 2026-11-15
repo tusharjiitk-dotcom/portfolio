@@ -26,10 +26,21 @@ function renderNav() {
   const currentPage = document.body.dataset.page;
   const links = DATA.nav.map(n => {
     const isActive = n.page === currentPage;
+    const isBlog = n.page === 'blog';
+    const openNewTab = isBlog && !isActive;
     const href = currentPage === n.page
       ? n.href.includes('#') ? n.href.split('index.html')[1] : n.href
       : n.href;
-    return `<a href="${href}" class="${isActive ? 'active' : ''}">${n.label}</a>`;
+    const label = openNewTab ? `${n.label} ↗` : n.label;
+    return `<a href="${href}" class="${isActive ? 'active' : ''}"${openNewTab ? ' target="_blank" rel="noopener"' : ''}>${label}</a>`;
+  }).join('');
+
+  const mobileLinks = DATA.nav.map(n => {
+    const isActive = n.page === currentPage;
+    const isBlog = n.page === 'blog';
+    const openNewTab = isBlog && !isActive;
+    const label = openNewTab ? `${n.label} ↗` : n.label;
+    return `<a href="${n.href}" onclick="closeMenu()"${openNewTab ? ' target="_blank" rel="noopener"' : ''}>${label}</a>`;
   }).join('');
 
   el.innerHTML = `
@@ -45,7 +56,7 @@ function renderNav() {
       </div>
     </nav>
     <div class="mobile-menu" id="mobile-menu">
-      ${DATA.nav.map(n => `<a href="${n.href}" onclick="closeMenu()">${n.label}</a>`).join('')}
+      ${mobileLinks}
       <div class="mobile-menu-cta">
         <a href="${DATA.personal.resume}" class="btn btn-outline" target="_blank">Resume ↓</a>
         <a href="index.html#contact" class="btn btn-primary">Let's Connect</a>
@@ -92,7 +103,7 @@ function renderFooter() {
   el.innerHTML = `
     <footer class="site-footer">
       <div class="container">
-        <span class="footer-copy">${DATA.footer.copy}</span>
+        <span class="footer-copy">© ${new Date().getFullYear()} Tushar Joshi</span>
         <div class="footer-links">
           ${DATA.footer.links.map(l => `<a href="${l.href}" target="_blank">${l.label}</a>`).join('')}
         </div>
@@ -791,14 +802,13 @@ function renderResearch() {
 }
 
 /* ─────────────────────────────────────────
-   MORE SECTION - Tabs
+   MORE SECTION
 ───────────────────────────────────────── */
 function renderMore() {
   const el = document.getElementById('more-content');
   if (!el) return;
   const m = DATA.more;
 
-  // Scores
   const scoresHTML = m.scores.map(s => `
     <div class="score-card fade-in">
       <div class="score-icon">${s.icon}</div>
@@ -807,69 +817,31 @@ function renderMore() {
       <div class="score-year">${s.year}</div>
     </div>`).join('');
 
-  // PoR
-  const porHTML = m.por.map(p => `
-    <div class="por-item fade-in">
-      <div class="por-icon">${p.icon}</div>
-      <div>
-        <div class="por-role">${p.role}</div>
-        <div class="por-org">${p.org}</div>
-      </div>
-    </div>`).join('');
-
-  // Co-curricular
   const ccHTML = m.cocurricular.map(c => `
-    <div class="cc-item fade-in">
+    <div class="cc-row fade-in">
       <div class="cc-name">${c.name}</div>
-      <div class="cc-result">${c.result}</div>
-      <div class="cc-org">${c.org}</div>
-    </div>`).join('');
-
-  // School
-  const schoolHTML = m.school.map(s => `
-    <div class="school-item fade-in">
-      <div class="school-text">
-        <div class="school-name">${s.name}</div>
-        <div class="school-result">${s.result}</div>
-        <div class="school-context">${s.context}</div>
-      </div>
+      <div class="cc-meta">${c.result} · ${c.org}</div>
     </div>`).join('');
 
   el.innerHTML = `
-    <div class="more-tabs">
-      <div class="more-tab active" onclick="switchMoreTab('scores', this)">📊 Test Scores</div>
-      <div class="more-tab" onclick="switchMoreTab('por', this)">👑 Positions of Responsibility</div>
-      <div class="more-tab" onclick="switchMoreTab('cc', this)">🏆 Co-Curricular</div>
-      <div class="more-tab" onclick="switchMoreTab('school', this)">🏫 School Honors</div>
-    </div>
-    <div class="more-panel active" id="more-scores">
-      <div class="scores-grid">${scoresHTML}</div>
-    </div>
-    <div class="more-panel" id="more-por">
-      <div class="por-list">${porHTML}</div>
-    </div>
-    <div class="more-panel" id="more-cc">
-      <div class="cc-grid">${ccHTML}</div>
-    </div>
-    <div class="more-panel" id="more-school">
-      <div class="school-list">${schoolHTML}</div>
+    <div class="more-layout">
+      <div class="more-scores-col">
+        <div class="more-col-eyebrow">Test Scores</div>
+        <div class="scores-grid">${scoresHTML}</div>
+      </div>
+      <div class="more-cc-col">
+        <div class="more-col-eyebrow">Co-Curricular</div>
+        <div class="cc-list">${ccHTML}</div>
+      </div>
     </div>`;
 }
 
-function switchMoreTab(id, btn) {
-  document.querySelectorAll('.more-tab').forEach(t => t.classList.remove('active'));
-  document.querySelectorAll('.more-panel').forEach(p => p.classList.remove('active'));
-  btn.classList.add('active');
-  document.getElementById('more-' + id)?.classList.add('active');
-}
-
 /* ─────────────────────────────────────────
-   AWARDS
+   RECOGNITION & LEADERSHIP
 ───────────────────────────────────────── */
 function renderAwards() {
   const el = document.getElementById('awards-content');
   if (!el) return;
-  const certs = DATA.certifications;
 
   const awardsHTML = DATA.awards.map(a => `
     <div class="award-card fade-in">
@@ -880,27 +852,26 @@ function renderAwards() {
       </div>
     </div>`).join('');
 
-  const certChips = certs.map(c => `
-    <span class="chip ${c.cat === 'management' ? 'chip-blue' : ''}">${c.name}</span>`).join('');
+  const leadershipHTML = DATA.leadership.map(l => `
+    <div class="ldr-row fade-in">
+      <div class="ldr-role">${l.role}</div>
+      <div class="ldr-org">${l.org}</div>
+      ${l.note ? `<div class="ldr-note">${l.note}</div>` : ''}
+    </div>`).join('');
 
   el.innerHTML = `
     <div class="awards-grid">${awardsHTML}</div>
-    <div class="cert-toggle-btn" id="cert-toggle" onclick="toggleCerts()">
-      <span>📜</span>
-      <span>View All ${certs.length} Certifications</span>
-      <span class="cert-toggle-arrow">↓</span>
-    </div>
-    <div class="cert-chips-wrap" id="cert-wrap">
-      <div class="cert-chips-inner">${certChips}</div>
-    </div>
-    <div style="margin-top:14px;">
-      <a href="certifications.html" class="btn btn-outline">View Certificate Gallery →</a>
-    </div>`;
-}
 
-function toggleCerts() {
-  document.getElementById('cert-wrap').classList.toggle('open');
-  document.getElementById('cert-toggle').classList.toggle('open');
+    <div class="ldr-block">
+      <div class="ldr-eyebrow">Leadership</div>
+      <div class="ldr-grid">${leadershipHTML}</div>
+    </div>
+
+    <div style="margin-top:28px;">
+      <a class="cert-expand-btn" href="certifications.html" target="_blank" rel="noopener">
+        View all ${DATA.certifications.length} certifications →
+      </a>
+    </div>`;
 }
 
 /* ─────────────────────────────────────────
@@ -910,37 +881,43 @@ function renderBlogPreview() {
   const el = document.getElementById('blog-preview-content');
   if (!el) return;
 
-  const platformLabel = { linkedin: 'LinkedIn', medium: 'Medium', personal: 'Blog' };
-  const catIcon = { product: '🧠', engineering: '⚙️', career: '💼', ai: '🤖', ideas: '💡' };
+  const catLabel = {
+    'product-strategy':     'Product & Strategy',
+    'ai-tech':              'AI & Tech',
+    'engineering-industry': 'Engineering & Industry',
+    'society-workplace':    'Society & Workplace',
+  };
 
-  const cards = DATA.blog.map(p => `
-    <a class="blog-preview-card" href="${p.link}" target="_blank">
-      <div class="bp-thumb">
-        ${p.image ? `<img src="${p.image}" alt="${p.title}">` : `<div class="bp-thumb-placeholder">${catIcon[p.category] || '📝'}</div>`}
-        <div class="bp-platform">${platformLabel[p.platform] || p.platform}</div>
+  const sortMonths = {Jan:0,Feb:1,Mar:2,Apr:3,May:4,Jun:5,Jul:6,Aug:7,Sep:8,Oct:9,Nov:10,Dec:11};
+  const parseSortDate = s => { const p = s.replace(/\(.*?\)/g,'').trim().split(/\s+/); return new Date(+p[2], sortMonths[p[1]]??0, +p[0]).getTime(); };
+  const sorted = [...DATA.blog].sort((a, b) => parseSortDate(b.sortDate) - parseSortDate(a.sortDate));
+  const recent = sorted.slice(0, 3);
+
+  const cards = recent.map(p => {
+    const timeEl = p.type === 'Article'
+      ? `<span class="bp-readtime">${p.readTime} read</span>`
+      : `<span class="bp-short-pill">Short read</span>`;
+    return `
+    <a class="bp-card" href="${p.url}" target="_blank" rel="noopener">
+      <div class="bp-cat">${(catLabel[p.category] || p.category).toUpperCase()}</div>
+      <div class="bp-title">${p.title}</div>
+      <div class="bp-excerpt">${p.excerpt}</div>
+      <div class="bp-footer">
+        <div class="bp-date-wrap"><span class="bp-date">${p.date}</span>${timeEl}</div>
+        <span class="bp-read">Read on LinkedIn ↗</span>
       </div>
-      <div class="bp-body">
-        <div class="bp-cat">${p.category}</div>
-        <div class="bp-title">${p.title}</div>
-        <div class="bp-excerpt">${p.excerpt}</div>
-        <div class="bp-meta">
-          <span class="bp-date">${p.date}</span>
-          <span class="bp-read">Read →</span>
-        </div>
-      </div>
-    </a>`).join('');
+    </a>`;
+  }).join('');
 
   el.innerHTML = `
-    <div class="blog-preview-header fade-in">
-      <div class="sec-head" style="margin:0;">
+    <div class="bp-header fade-in">
+      <div>
         <div class="sec-label">Writing & Thinking</div>
-        <div class="sec-title">From the Blog</div>
+        <div class="sec-title" style="margin:4px 0 0;">From the Blog</div>
       </div>
-      <a href="blog.html" class="blog-view-all">View all posts →</a>
+      <a href="blog.html" target="_blank" rel="noopener" class="blog-view-all">All writing ↗</a>
     </div>
-    <div class="blog-scroll-wrap fade-in">
-      <div class="blog-row">${cards}</div>
-    </div>`;
+    <div class="bp-grid fade-in">${cards}</div>`;
 }
 
 /* ─────────────────────────────────────────
@@ -1112,22 +1089,3 @@ function initScrollAnimations() {
   }, 100);
 }
 
-/* ─────────────────────────────────────────
-   CONTACT FORM
-───────────────────────────────────────── */
-function handleContactForm(e) {
-  e.preventDefault();
-  const name  = document.getElementById('cf-name').value.trim();
-  const email = document.getElementById('cf-email').value.trim();
-  const msg   = document.getElementById('cf-msg').value.trim();
-  const to    = DATA.personal.email;
-  const subj  = encodeURIComponent(`Portfolio Enquiry from ${name}`);
-  const body  = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${msg}`);
-
-  window.open(`mailto:${to}?subject=${subj}&body=${body}`, '_blank');
-
-  const status = document.getElementById('cf-status');
-  status.textContent = '✓ Opening your mail client…';
-  status.style.display = 'block';
-  setTimeout(() => { status.style.display = 'none'; }, 4000);
-}

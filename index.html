@@ -3,8 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Tushar Joshi - Engineer, MBA, Product Thinker. IIT Kanpur M.Tech (10/10) · IIM Udaipur Gold Medal · Ex-Mahindra R&D.">
+  <meta name="description" content="Tushar Joshi — Product, Program & Strategy Leader. Digital transformation, AI execution and GovTech at Samagra. Ex-Mahindra R&D · IIM Udaipur Gold Medalist · IIT Kanpur M.Tech.">
   <title>Tushar Joshi - Portfolio</title>
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Tushar Joshi — Product, Program & Strategy">
+  <meta property="og:description" content="Tushar Joshi — Product, Program & Strategy Leader. Digital transformation, AI execution and GovTech at Samagra. Ex-Mahindra R&D · IIM Udaipur Gold Medalist · IIT Kanpur M.Tech.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://tusharjoshi.netlify.app/">
+  <meta property="og:image" content="https://tusharjoshi.netlify.app/assets/images/og-card.png">
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 
   <!-- Google Fonts: Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -97,12 +109,13 @@
     </div>
   </section>
 
-  <!-- ═══════ AWARDS & CERTIFICATIONS ═══════ -->
+  <!-- ═══════ RECOGNITION & LEADERSHIP ═══════ -->
+  <div id="recognition" aria-hidden="true" style="scroll-margin-top:72px;"></div>
   <section id="awards" class="section">
     <div class="container">
       <div class="sec-head fade-in">
         <div class="sec-label">Recognition</div>
-        <div class="sec-title">Awards &amp; Certifications</div>
+        <div class="sec-title">Recognition &amp; Leadership</div>
       </div>
       <div id="awards-content"></div>
     </div>
@@ -127,41 +140,33 @@
   </section>
 
   <!-- ═══════ CONTACT ═══════ -->
-  <section id="contact" class="section section-dark">
+  <section id="contact" class="section" style="background:#f4f5f9;">
     <div class="container">
-      <div class="sec-head fade-in">
-        <div class="sec-label">Get In Touch</div>
-        <div class="sec-title">Contact</div>
-      </div>
-      <div class="contact-grid fade-in">
-        <div>
-          <p class="contact-desc">Open to full-time roles in product management, strategy, and engineering leadership. Currently based in India and exploring global opportunities.</p>
-          <a class="contact-link" href="mailto:tusharj.iitk@gmail.com">
-            <div class="contact-link-icon">✉</div>tusharj.iitk@gmail.com
-          </a>
-          <a class="contact-link" href="https://www.linkedin.com/in/tushar-profile/" target="_blank">
-            <div class="contact-link-icon">in</div>linkedin.com/in/tushar-profile
-          </a>
-          <a class="contact-link" href="assets/resume.pdf" target="_blank">
-            <div class="contact-link-icon">↓</div>Download Resume (PDF)
+      <div class="contact-card fade-in">
+        <div class="contact-card-left">
+          <div class="contact-card-eyebrow">GET IN TOUCH</div>
+          <div class="contact-card-title">Let's talk</div>
+          <p class="contact-card-text">Always happy to talk product, strategy, AI or digital transformation. Email or LinkedIn is the quickest way to reach me.</p>
+          <a class="contact-resume-btn" href="https://drive.google.com/file/d/17k-6KG361ABrCkHEWKXsWIJfDkZzDktp/view?usp=sharing" target="_blank" rel="noopener">↓ View Resume ↗</a>
+        </div>
+        <div class="contact-card-right">
+          <div class="contact-tile">
+            <div class="contact-tile-icon">✉</div>
+            <div class="contact-tile-body">
+              <div class="contact-tile-label">Email</div>
+              <div class="contact-tile-value"><a href="mailto:tusharj.iitk@gmail.com" style="color:inherit;text-decoration:none;">tusharj.iitk@gmail.com</a></div>
+            </div>
+            <button class="contact-tile-action" onclick="(function(btn){var txt='tusharj.iitk@gmail.com';if(navigator.clipboard){navigator.clipboard.writeText(txt).then(function(){btn.textContent='Copied!';setTimeout(function(){btn.textContent='Copy'},1800)})}else{var ta=document.createElement('textarea');ta.value=txt;ta.style.cssText='position:fixed;opacity:0';document.body.appendChild(ta);ta.focus();ta.select();try{document.execCommand('copy');btn.textContent='Copied!';setTimeout(function(){btn.textContent='Copy'},1800)}catch(e){}document.body.removeChild(ta)}})(this)" title="Copy email">Copy</button>
+          </div>
+          <a class="contact-tile contact-tile-link" href="https://www.linkedin.com/in/tushar-profile/" target="_blank" rel="noopener">
+            <div class="contact-tile-icon contact-tile-icon-li">in</div>
+            <div class="contact-tile-body">
+              <div class="contact-tile-label">LinkedIn</div>
+              <div class="contact-tile-value">linkedin.com/in/tushar-profile</div>
+            </div>
+            <span class="contact-tile-action contact-tile-arrow">↗</span>
           </a>
         </div>
-        <form id="contact-form" onsubmit="handleContactForm(event)">
-          <div class="form-group">
-            <label class="form-label">Name</label>
-            <input class="form-input" id="cf-name" type="text" placeholder="Your name" required>
-          </div>
-          <div class="form-group">
-            <label class="form-label">Email</label>
-            <input class="form-input" id="cf-email" type="email" placeholder="your@email.com" required>
-          </div>
-          <div class="form-group">
-            <label class="form-label">Message</label>
-            <textarea class="form-input form-textarea" id="cf-msg" placeholder="Your message..." required></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary" id="cf-btn">Send Message →</button>
-          <div id="cf-status" style="display:none;margin-top:12px;font-size:13px;color:var(--accent);font-weight:600;"></div>
-        </form>
       </div>
     </div>
   </section>

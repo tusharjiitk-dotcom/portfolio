@@ -1,7 +1,7 @@
 ﻿/**
  * blog.js - Blog Page Logic
  * ==========================
- * Renders all blog posts with creative category + platform filters.
+ * Renders blog posts in a year-grouped list with chip category filters.
  * To add a post: add an object to DATA.blog in data.js.
  */
 
@@ -9,8 +9,8 @@ document.addEventListener('DOMContentLoaded', () => {
   renderNav();
   renderFooter();
   renderBlogHero();
-  renderBlogFilters();
-  renderBlogGrid();
+  renderBlogChips();
+  renderBlogList();
   initScrollAnimations_blog();
 });
 
@@ -21,117 +21,153 @@ function renderBlogHero() {
   const el = document.getElementById('blog-hero-content');
   if (!el) return;
   el.innerHTML = `
-    <div class="blog-hero-title fade-in">Writing &amp; Thinking</div>
-    <p class="blog-hero-sub fade-in">Writing on AI, product strategy, engineering, and society - 7 articles · 3,800+ LinkedIn followers.</p>`;
+    <a class="blog-back-link" href="index.html#blog" onclick="handleBlogBack(event)">← Back to portfolio</a>
+    <div class="blog-hero-row">
+      <div>
+        <div class="blog-hero-eyebrow">Writing & Thinking</div>
+        <div class="blog-hero-title">Blog</div>
+        <div class="blog-hero-sub">Writing on AI, product strategy, engineering and society.</div>
+      </div>
+      <div class="blog-hero-meta">${DATA.blog.length} articles · 4,100+ LinkedIn followers</div>
+    </div>`;
+}
+
+function handleBlogBack(e) {
+  if (history.length <= 1) {
+    e.preventDefault();
+    window.close();
+    setTimeout(() => { window.location.href = 'index.html#blog'; }, 50);
+  }
 }
 
 /* ─────────────────────────────────────────
-   FILTERS
+   CHIP FILTERS
 ───────────────────────────────────────── */
-let activeCategory = 'all';
-let activePlatform = 'all';
+let activeChipCat = 'all';
 
-function renderBlogFilters() {
-  const catEl = document.getElementById('blog-cat-filters');
-  const platEl = document.getElementById('blog-platform-filters');
-  if (!catEl || !platEl) return;
-
-  // Count posts per category
+function renderBlogChips() {
+  const el = document.getElementById('blog-chip-filters');
+  if (!el) return;
   const counts = {};
   DATA.blog.forEach(p => { counts[p.category] = (counts[p.category] || 0) + 1; });
-  counts['all'] = DATA.blog.length;
 
-  const catColors = { blue: '#1e40af', navy: '#0a0f1e', gold: '#b58a1f', green: '#15803d', gray: '#4a5568' };
-
-  // Category cards
-  catEl.innerHTML = DATA.blogCategories.map(c => `
-    <div class="blog-cat-card ${c.id === 'all' ? 'active' : ''}"
-         onclick="filterBlog('${c.id}', this)"
-         data-filter-cat="${c.id}">
-      <div class="bcc-icon">${c.icon}</div>
-      <div class="bcc-label">${c.label}</div>
-      <div class="bcc-count">${counts[c.id] || 0} post${(counts[c.id] || 0) !== 1 ? 's' : ''}</div>
-    </div>`).join('');
-
-  // Platform pills
-  const platforms = ['all', ...new Set(DATA.blog.map(p => p.platform))];
-  const platLabels = { all: '🌐 All Platforms', linkedin: 'in LinkedIn', medium: 'M Medium', personal: '✎ Personal' };
-
-  platEl.innerHTML = platforms.map(p => `
-    <div class="platform-pill ${p === 'all' ? 'active' : ''}"
-         onclick="filterPlatform('${p}', this)"
-         data-filter-plat="${p}">
-      ${platLabels[p] || p}
-    </div>`).join('');
+  el.innerHTML = DATA.blogCategories.map(c => {
+    const count = c.id === 'all' ? DATA.blog.length : (counts[c.id] || 0);
+    if (c.id !== 'all' && !counts[c.id]) return '';
+    return `<button class="blog-chip${c.id === 'all' ? ' active' : ''}"
+      onclick="filterBlogChip('${c.id}', this)">
+      ${c.label}<span class="blog-chip-count">${count}</span>
+    </button>`;
+  }).join('');
 }
 
-function filterBlog(cat, btn) {
-  activeCategory = cat;
-  document.querySelectorAll('[data-filter-cat]').forEach(el => el.classList.remove('active'));
+function filterBlogChip(cat, btn) {
+  activeChipCat = cat;
+  document.querySelectorAll('.blog-chip').forEach(b => b.classList.remove('active'));
   btn.classList.add('active');
-  applyBlogFilters();
+  applyBlogChipFilter();
 }
 
-function filterPlatform(plat, btn) {
-  activePlatform = plat;
-  document.querySelectorAll('[data-filter-plat]').forEach(el => el.classList.remove('active'));
-  btn.classList.add('active');
-  applyBlogFilters();
-}
-
-function applyBlogFilters() {
-  const cards = document.querySelectorAll('.blog-card');
-  let visible = 0;
-  cards.forEach(card => {
-    const catMatch  = activeCategory === 'all' || card.dataset.cat === activeCategory;
-    const platMatch = activePlatform === 'all' || card.dataset.plat === activePlatform;
-    const show = catMatch && platMatch;
-    card.classList.toggle('hidden', !show);
-    if (show) visible++;
+function applyBlogChipFilter() {
+  document.querySelectorAll('.blog-year-group').forEach(group => {
+    const rows = group.querySelectorAll('.blog-post-row');
+    let visibleCount = 0;
+    rows.forEach(row => {
+      const match = activeChipCat === 'all' || row.dataset.cat === activeChipCat;
+      row.classList.toggle('hidden', !match);
+      if (match) visibleCount++;
+    });
+    const countEl = group.querySelector('.byg-count');
+    if (countEl) countEl.textContent = `· ${visibleCount}`;
+    group.style.display = visibleCount === 0 ? 'none' : '';
   });
-  const empty = document.getElementById('blog-empty');
-  if (empty) empty.style.display = visible === 0 ? 'block' : 'none';
 }
 
 /* ─────────────────────────────────────────
-   BLOG GRID
+   BLOG LIST (grouped by year)
 ───────────────────────────────────────── */
-function renderBlogGrid() {
-  const el = document.getElementById('blog-grid');
+const CAT_LABEL = {
+  'product-strategy':     'Product & Strategy',
+  'ai-tech':              'AI & Tech',
+  'engineering-industry': 'Engineering & Industry',
+  'society-workplace':    'Society & Workplace',
+};
+
+const SORT_MONTHS = {Jan:0,Feb:1,Mar:2,Apr:3,May:4,Jun:5,Jul:6,Aug:7,Sep:8,Oct:9,Nov:10,Dec:11};
+
+function parseSortDate(s) {
+  const parts = s.replace(/\(.*?\)/g, '').trim().split(/\s+/);
+  return new Date(+parts[2], SORT_MONTHS[parts[1]] ?? 0, +parts[0]).getTime();
+}
+
+function renderBlogList() {
+  const el = document.getElementById('blog-year-list');
   if (!el) return;
 
-  const platformLabel = { linkedin: 'LinkedIn', medium: 'Medium', personal: 'Blog' };
-  const catIcon = { product: '🧠', engineering: '⚙️', career: '💼', ai: '🤖', ideas: '💡' };
-
-  if (DATA.blog.length === 0) {
-    el.innerHTML = `<div class="blog-empty">
-      <p>📝 No posts yet - add your first post in <code>js/data.js</code></p>
-    </div>`;
+  if (!DATA.blog.length) {
+    el.innerHTML = `<p style="color:var(--text-light);text-align:center;padding:64px 0;">No posts yet.</p>`;
     return;
   }
 
-  el.innerHTML = DATA.blog.map(p => `
-    <a class="blog-card fade-in" href="${p.link}" target="_blank"
-       data-cat="${p.category}" data-plat="${p.platform}">
-      <div class="bc-thumb">
-        ${p.image
-          ? `<img src="${p.image}" alt="${p.title}">`
-          : `<div class="bc-thumb-ph">${catIcon[p.category] || '📝'}</div>`}
-        <div class="bc-platform">${platformLabel[p.platform] || p.platform}</div>
-      </div>
-      <div class="bc-body">
-        <div class="bc-cat">${p.category.charAt(0).toUpperCase() + p.category.slice(1)}</div>
-        <div class="bc-title">${p.title}</div>
-        <div class="bc-excerpt">${p.excerpt}</div>
-        <div class="bc-tags">${(p.tags || []).map(t => `<span class="chip">${t}</span>`).join('')}</div>
-        <div class="bc-footer" style="margin-top:12px;">
-          <span class="bc-date">${p.date}</span>
-          <span class="bc-read">Read more →</span>
+  const sorted = [...DATA.blog].sort((a, b) => parseSortDate(b.sortDate) - parseSortDate(a.sortDate));
+
+  const groups = {};
+  sorted.forEach(p => {
+    const y = p.date.split(' ')[1];
+    if (!groups[y]) groups[y] = [];
+    groups[y].push(p);
+  });
+
+  const years = Object.keys(groups).sort((a, b) => b - a);
+
+  el.innerHTML = years.map(year => {
+    const posts = groups[year];
+    const postsHTML = posts.map(p => {
+      const tags = (p.tags || []).slice(0, 2).map(t => `<span class="blog-tag">${t}</span>`).join('');
+      const label = CAT_LABEL[p.category] || p.category;
+      const timeEl = p.type === 'Article'
+        ? `<div class="bpr-readtime">${p.readTime} read</div>`
+        : `<span class="bpr-short-pill">Short read</span>`;
+      return `
+        <div class="blog-post-row fade-in" data-cat="${p.category}">
+          <div class="bpr-date-col">
+            <div class="bpr-date">${p.date}</div>
+            ${timeEl}
+          </div>
+          <div class="bpr-middle">
+            <div class="bpr-cat">${label.toUpperCase()}</div>
+            <div class="bpr-title">${p.title}</div>
+            <div class="bpr-excerpt">${p.excerpt}</div>
+            ${tags ? `<div class="bpr-tags">${tags}</div>` : ''}
+          </div>
+          <div class="bpr-right">
+            <a class="bpr-read" href="${p.url}" target="_blank" rel="noopener">Read on LinkedIn ↗</a>
+          </div>
+        </div>`;
+    }).join('');
+
+    return `
+      <div class="blog-year-group" id="byg-${year}">
+        <button class="byg-header" onclick="toggleYearGroup('${year}', this)" aria-expanded="true">
+          <span class="byg-year">${year}</span>
+          <span class="byg-count">· ${posts.length}</span>
+          <span class="byg-line"></span>
+          <span class="byg-chevron">▾</span>
+        </button>
+        <div class="byg-body" id="byg-body-${year}">
+          ${postsHTML}
         </div>
-      </div>
-    </a>`).join('') + `<div id="blog-empty" class="blog-empty" style="display:none;">
-      No posts match the selected filters.
-    </div>`;
+      </div>`;
+  }).join('');
+}
+
+function toggleYearGroup(year, btn) {
+  const body = document.getElementById(`byg-body-${year}`);
+  if (!body) return;
+  const expanded = btn.getAttribute('aria-expanded') === 'true';
+  btn.setAttribute('aria-expanded', String(!expanded));
+  btn.classList.toggle('collapsed', expanded);
+  body.classList.toggle('collapsed', expanded);
 }
 
 /* ─────────────────────────────────────────
@@ -139,7 +175,9 @@ function renderBlogGrid() {
 ───────────────────────────────────────── */
 function initScrollAnimations_blog() {
   const observer = new IntersectionObserver(entries => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
-  }, { threshold: 0.08 });
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+    });
+  }, { threshold: 0.05 });
   setTimeout(() => { document.querySelectorAll('.fade-in').forEach(el => observer.observe(el)); }, 100);
 }

@@ -3,3 +3,13 @@ node_modules/
 *.csv
 .DS_Store
 Thumbs.db
+Project_Tracker.xlsx
+*.xlsx
+Ref/
+_sheet_import/
+assets/images/projects/*.png
+_convert_webp.mjs
+_make_og_card.mjs
+_patch_webp.mjs
+package.json
+package-lock.json

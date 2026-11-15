@@ -21,24 +21,36 @@ function renderCertHero() {
   const el = document.getElementById('cert-hero-content');
   if (!el) return;
   el.innerHTML = `
-    <div class="cert-hero-title fade-in">Certifications</div>
-    <p class="cert-hero-sub fade-in">${DATA.certifications.length}+ credentials across Management, Technical, Digital, and Professional domains.</p>`;
+    <a class="cert-back-link" href="index.html#recognition" onclick="handleCertBack(event)">← Back to portfolio</a>
+    <div class="cert-hero-row">
+      <div>
+        <div class="cert-hero-eyebrow">Credentials</div>
+        <div class="cert-hero-title fade-in">Certifications</div>
+      </div>
+      <div class="cert-hero-meta">${DATA.certifications.length} certifications</div>
+    </div>`;
+}
+
+function handleCertBack(e) {
+  if (history.length <= 1) {
+    e.preventDefault();
+    window.close();
+    window.location.href = 'index.html#recognition';
+  }
 }
 
 /* ─────────────────────────────────────────
    FILTERS
 ───────────────────────────────────────── */
 const CERT_CATS = [
-  { id: 'all',          label: 'All',                    icon: '📜' },
-  { id: 'management',   label: 'Management & Strategy',  icon: '📋' },
-  { id: 'technical',    label: 'Technical & Engineering', icon: '⚙️' },
-  { id: 'digital',      label: 'Digital & Data',         icon: '💻' },
-  { id: 'professional', label: 'Professional',           icon: '🎯' },
+  { id: 'all',           label: 'All'             },
+  { id: 'product-agile', label: 'Product & Agile' },
+  { id: 'data-ai',       label: 'Data & AI'       },
+  { id: 'quality',       label: 'Quality'         },
+  { id: 'security',      label: 'Security'        },
+  { id: 'engineering',   label: 'Engineering'     },
+  { id: 'management',    label: 'Management'      },
 ];
-
-const CERT_ICONS = {
-  management:   '📋', technical: '⚙️', digital: '💻', professional: '🎯',
-};
 
 function renderCertFilters() {
   const el = document.getElementById('cert-cat-tabs');
@@ -49,7 +61,7 @@ function renderCertFilters() {
     const count = c.id === 'all' ? DATA.certifications.length : (counts[c.id] || 0);
     return `<div class="cert-cat-tab ${c.id === 'all' ? 'active' : ''}"
                onclick="filterCerts('${c.id}', this)">
-      ${c.icon} ${c.label} <span style="opacity:0.6;font-size:11px;">(${count})</span>
+      ${c.label}<span class="cert-tab-count">${count}</span>
     </div>`;
   }).join('');
 }
@@ -76,24 +88,19 @@ function renderCertGrid(filterCat) {
     if (certs.length === 0) return '';
     return `
       <div class="cert-category-block fade-in">
-        <div class="cert-section-title">
-          ${cat.icon} ${cat.label}
-          <span class="cert-section-count">${certs.length}</span>
+        <div class="cert-cat-header">
+          <span class="cert-cat-label">${cat.label.toUpperCase()}</span>
+          <span class="cert-cat-count">${certs.length}</span>
         </div>
         <div class="cert-grid">
-          ${certs.map(c => `
-            <div class="cert-card fade-in">
-              <div class="cert-img">
-                ${c.image
-                  ? `<img src="${c.image}" alt="${c.name}">`
-                  : CERT_ICONS[c.cat] || '📜'}
-              </div>
-              <div class="cert-body">
-                <div class="cert-name">${c.name}</div>
-                <div class="cert-issuer">${c.issuer}</div>
-                <div class="cert-year">${c.year}</div>
-              </div>
-            </div>`).join('')}
+          ${certs.map(c => {
+            const tag = c.url ? `a` : `div`;
+            const attrs = c.url ? ` href="${c.url}" target="_blank" rel="noopener"` : ``;
+            return `<${tag} class="cert-card fade-in"${attrs}>
+              <div class="cert-name">${c.name}${c.url ? ' <span class="cert-link-mark">↗</span>' : ''}</div>
+              <div class="cert-issuer">${c.issuer}</div>
+            </${tag}>`;
+          }).join('')}
         </div>
       </div>`;
   }).join('');
