@@ -1735,8 +1735,13 @@ ul { list-style: none; }
 
 .blog-posts-container { max-width: 900px; }
 
+/* Filters row */
+.blog-filter-row {
+  display: flex; align-items: flex-start; gap: 12px; flex-wrap: wrap; margin-bottom: 40px;
+}
+
 /* Chip filters */
-.blog-chip-filters { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 40px; }
+.blog-chip-filters { display: flex; gap: 8px; flex-wrap: wrap; flex: 1; min-width: 0; }
 .blog-chip {
   display: inline-flex; align-items: center; gap: 5px;
   padding: 6px 16px; border-radius: 999px;
@@ -1748,6 +1753,22 @@ ul { list-style: none; }
 .blog-chip:hover { border-color: var(--accent); color: var(--accent); }
 .blog-chip.active { background: var(--navy); color: #fff; border-color: var(--navy); }
 .blog-chip-count { font-size: 11px; opacity: 0.65; }
+
+/* Format toggle */
+.blog-format-toggle {
+  display: inline-flex; align-items: center;
+  background: #fff; border: 1px solid var(--border);
+  border-radius: 999px; padding: 3px; flex-shrink: 0;
+}
+.blog-fmt-btn {
+  display: inline-flex; align-items: center;
+  padding: 6px 12px; border-radius: 999px;
+  font-size: 13px; font-weight: 600; font-family: var(--font);
+  color: #6b7280; background: none; border: none;
+  cursor: pointer; transition: all 0.18s; white-space: nowrap;
+}
+.blog-fmt-btn.active { background: var(--navy); color: #fff; }
+.blog-fmt-btn:not(.active):hover { color: var(--text); }
 
 /* Year groups */
 .blog-year-group { margin-bottom: 40px; }
@@ -1944,6 +1965,7 @@ a.cert-card { text-decoration: none; color: inherit; display: block; cursor: poi
 
   /* Blog */
   .blog-chip-filters { gap: 6px; }
+  .blog-filter-row { gap: 8px; }
 
   /* Certs */
   .cert-grid { grid-template-columns: repeat(2, 1fr); }
@@ -2034,6 +2056,8 @@ a.cert-card { text-decoration: none; color: inherit; display: block; cursor: poi
   /* Blog */
   .blog-chip-filters { gap: 5px; }
   .blog-chip { font-size: 12px; padding: 5px 12px; }
+  .blog-filter-row { flex-direction: column; align-items: flex-start; }
+  .blog-format-toggle { align-self: flex-start; }
 
   /* Certs */
   .cert-grid { grid-template-columns: repeat(2, 1fr); }
