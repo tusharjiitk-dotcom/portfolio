@@ -19,7 +19,7 @@ const DATA = {
     initials:   'TJ',
     tagline:    'Product, Program & Strategy Leader · Digital Transformation · AI Execution ',
     headline:   "Hi, I'm <em>Tushar Joshi</em>",
-    bio:        'Consultant at Samagra Governance Consulting, driving digital transformation &amp; AI product execution across state-level government programs. Ex-Deputy Manager R&amp;D at Mahindra · MBA Gold Medalist, IIM Udaipur · M.Tech 10/10 CPI, IIT Kanpur.',
+    bio:        'Consultant &amp; Program Manager at Samagra Governance, driving digital transformation &amp; AI product execution across state-level government programs. Ex-Deputy Manager R&amp;D at Mahindra · MBA Gold Medalist, IIM Udaipur · M.Tech 10/10 CPI, IIT Kanpur.',
     photo:      'assets/images/headshot.png',
     email:      'tusharj.iitk@gmail.com',
     email2:     'tusharjoshi.dem2024@iimu.ac.in',
@@ -59,7 +59,7 @@ const DATA = {
   ───────────────────────────────────────── */
   about: {
     heading: 'Engineer by training. Strategist by practice. Builder by instinct.',
-    body:    "I'm drawn to work that sits between disciplines - where engineering rigour meets strategy and ground-level execution. Three-institution gold medalist. Patent holder. 4 peer-reviewed papers. Always building something that matters.",
+    body:    "I'm drawn to work that sits between disciplines - where engineering rigour meets strategy and ground-level execution. Three-institution gold medalist. Co-inventor on a published patent. 4 published research papers. Always building something that matters.",
     highlights: [
      /* { row:'top',    num:'4.5+', title:'Cross-sector Experience',    desc:'GovTech · Automotive R&D · MBA · Engineering',                              color:'#1e3a8a', image:'https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&h=600&fit=crop&auto=format' },*/
        { row:'top',    num:'5+',   title:'Cross-sector Experience',    desc:'GovTech · Automotive R&D · MBA · Engineering',                              color:'#1e3a8a', image:'assets/images/About_CSExp.webp' },
@@ -68,8 +68,8 @@ const DATA = {
       { row:'top',    num:'',     title:'AI Product Execution',       desc:'PRDs, Figma, vendor mgmt & A/B experiments - deployed at scale',           color:'#3b0764', image:'assets/images/About_AIproduct.webp' },
       { row:'bottom', num:'',     title:'Program Management',         desc:'Cross-functional R&D & GovTech programmes at Mahindra & Samagra',           color:'#064e3b', image:'assets/images/About_Program.webp' },
       { row:'bottom', num:'30+',  title:'Certifications',             desc:'CSPO · Six Sigma GB · AI · Product Strategy & more',                        color:'#1a3a1a', image:'assets/images/About_Certifications.webp' },
-      { row:'bottom', num:'7',    title:'Articles Published',         desc:'AI, product strategy, engineering & society - LinkedIn',                    color:'#312e81', image:'assets/images/About_Articles.webp' },
-      { row:'bottom', num:'5',    title:'Research & Patents',         desc:'Peer-reviewed publications & 1 patent under examination',                  color:'#4a1942', image:'assets/images/About_Research.webp' },
+      { row:'bottom', num:null,   title:'Articles & Short Reads',     desc:'AI, product strategy, engineering & society - LinkedIn',                    color:'#312e81', image:'assets/images/About_Articles.webp' },
+      { row:'bottom', num:'5',    title:'Research & Patents',         desc:'4 published research papers & 1 patent under examination',              color:'#4a1942', image:'assets/images/About_Research.webp' },
     ],
   },
 
@@ -79,7 +79,7 @@ const DATA = {
   experience: [
     {
       id:             'samagra',
-      role:           'Program Manager (Consultant)',
+      role:           'Consultant · Program Manager',
       company:        'Samagra Governance Consulting',
       period:         'Mar 2025 - Present',
       duration:       'Current',

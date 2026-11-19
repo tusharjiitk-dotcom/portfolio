@@ -205,16 +205,19 @@ function renderAbout() {
   ];
   const stagger = [0, 60, 120, 60, 60, 120, 60, 0]; // ms delay per card
 
-  const cards = DATA.about.highlights.map((h, i) => `
+  const cards = DATA.about.highlights.map((h, i) => {
+    const num = (h.title === 'Articles & Short Reads') ? DATA.blog.length : h.num;
+    return `
     <div class="hl-card" style="background-color:${h.color}">
       <div class="hl-img" style="background-image:url('${h.image}')"></div>
       <div class="hl-overlay"></div>
       <div class="hl-body">
-        ${h.num ? `<div class="hl-num">${h.num}</div>` : ''}
+        ${num ? `<div class="hl-num">${num}</div>` : ''}
         <div class="hl-title">${h.title}</div>
         <div class="hl-desc">${h.desc}</div>
       </div>
-    </div>`).join('');
+    </div>`;
+  }).join('');
 
   el.innerHTML = `<div class="hl-grid">${cards}</div>`;
 

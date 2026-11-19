@@ -9,8 +9,9 @@ document.addEventListener('DOMContentLoaded', () => {
   renderNav();
   renderFooter();
   renderBlogHero();
-  renderBlogChips();
   renderBlogList();
+  renderBlogChips();
+  renderBlogFormatToggle();
   initScrollAnimations_blog();
 });
 
@@ -28,7 +29,7 @@ function renderBlogHero() {
         <div class="blog-hero-title">Blog</div>
         <div class="blog-hero-sub">Writing on AI, product strategy, engineering and society.</div>
       </div>
-      <div class="blog-hero-meta">${DATA.blog.length} articles · 4,100+ LinkedIn followers</div>
+      <div class="blog-hero-meta">${DATA.blog.filter(p=>p.type==='Article').length} articles · ${DATA.blog.filter(p=>p.type==='Post').length} short reads · 4,100+ LinkedIn followers</div>
     </div>`;
 }
 
@@ -44,17 +45,22 @@ function handleBlogBack(e) {
    CHIP FILTERS
 ───────────────────────────────────────── */
 let activeChipCat = 'all';
+let activeFormat   = 'all';
 
 function renderBlogChips() {
   const el = document.getElementById('blog-chip-filters');
   if (!el) return;
+  const pool = activeFormat === 'all' ? DATA.blog : DATA.blog.filter(p => p.type === activeFormat);
   const counts = {};
-  DATA.blog.forEach(p => { counts[p.category] = (counts[p.category] || 0) + 1; });
+  pool.forEach(p => { counts[p.category] = (counts[p.category] || 0) + 1; });
+
+  // If the currently active chip has no posts in the new pool, reset it to 'all'
+  if (activeChipCat !== 'all' && !counts[activeChipCat]) activeChipCat = 'all';
 
   el.innerHTML = DATA.blogCategories.map(c => {
-    const count = c.id === 'all' ? DATA.blog.length : (counts[c.id] || 0);
+    const count = c.id === 'all' ? pool.length : (counts[c.id] || 0);
     if (c.id !== 'all' && !counts[c.id]) return '';
-    return `<button class="blog-chip${c.id === 'all' ? ' active' : ''}"
+    return `<button class="blog-chip${c.id === activeChipCat ? ' active' : ''}"
       onclick="filterBlogChip('${c.id}', this)">
       ${c.label}<span class="blog-chip-count">${count}</span>
     </button>`;
@@ -65,15 +71,47 @@ function filterBlogChip(cat, btn) {
   activeChipCat = cat;
   document.querySelectorAll('.blog-chip').forEach(b => b.classList.remove('active'));
   btn.classList.add('active');
-  applyBlogChipFilter();
+  applyBlogFilters();
 }
 
-function applyBlogChipFilter() {
+/* ─────────────────────────────────────────
+   FORMAT TOGGLE
+───────────────────────────────────────── */
+function renderBlogFormatToggle() {
+  const el = document.getElementById('blog-format-toggle');
+  if (!el) return;
+  const opts = [
+    { id: 'all',     label: 'All' },
+    { id: 'Article', label: 'Articles' },
+    { id: 'Post',    label: 'Short reads' },
+  ];
+  el.innerHTML = opts.map(o =>
+    `<button class="blog-fmt-btn${o.id === 'all' ? ' active' : ''}"
+      aria-pressed="${o.id === 'all'}"
+      onclick="filterBlogFormat('${o.id}', this)">${o.label}</button>`
+  ).join('');
+}
+
+function filterBlogFormat(format, btn) {
+  activeFormat = format;
+  document.querySelectorAll('.blog-fmt-btn').forEach(b => {
+    b.classList.remove('active');
+    b.setAttribute('aria-pressed', 'false');
+  });
+  btn.classList.add('active');
+  btn.setAttribute('aria-pressed', 'true');
+  renderBlogChips();   // recompute chip counts for new format pool
+  applyBlogFilters();
+}
+
+function applyBlogFilters() {
   document.querySelectorAll('.blog-year-group').forEach(group => {
     const rows = group.querySelectorAll('.blog-post-row');
     let visibleCount = 0;
     rows.forEach(row => {
-      const match = activeChipCat === 'all' || row.dataset.cat === activeChipCat;
+      const catMatch = activeChipCat === 'all' || row.dataset.cat === activeChipCat;
+      const fmtMatch = activeFormat  === 'all' || row.dataset.type === activeFormat;
+      const match = catMatch && fmtMatch;
       row.classList.toggle('hidden', !match);
       if (match) visibleCount++;
     });
@@ -129,7 +167,7 @@ function renderBlogList() {
         ? `<div class="bpr-readtime">${p.readTime} read</div>`
         : `<span class="bpr-short-pill">Short read</span>`;
       return `
-        <div class="blog-post-row fade-in" data-cat="${p.category}">
+        <div class="blog-post-row fade-in" data-cat="${p.category}" data-type="${p.type}">
           <div class="bpr-date-col">
             <div class="bpr-date">${p.date}</div>
             ${timeEl}
